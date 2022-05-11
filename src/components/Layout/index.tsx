@@ -1,4 +1,5 @@
 import React from "react"
+import Footer from "../Footer"
 import Header from "../Header"
 
 type Props = {
@@ -8,7 +9,7 @@ const Layout = (props:Props) => {
   return <div className="bg-[#2E2224]">
     <Header />
     <div>{props.children}</div>
-    <div>Footer</div>
+    <Footer />
   </div>
 }
 

@@ -35,6 +35,7 @@ module.exports = {
         grey: "#818181",
         darkishGrey: "#5A5A5A",
         darkGrey: "#282828",
+        imperGrey: "#E0E0E0",
       },
       fontFamily: {
         spaceGrotesk: ["'Space Grotesk'"],
