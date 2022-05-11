@@ -6,7 +6,7 @@ type Props = {
   children: React.ReactNode
 }
 const Layout = (props:Props) => {
-  return <div className="bg-[#2E2224]">
+  return <div className="bg-[#2E2224] px-x-huge">
     <Header />
     <div>{props.children}</div>
     <Footer />
