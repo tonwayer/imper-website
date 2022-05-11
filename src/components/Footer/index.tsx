@@ -7,7 +7,7 @@ const FooterCol = (props: { title: string, items: Array<{ title: string, address
   <ul className="text-imperGrey">
     {props.items.map((item, index) => (
       <li className="mb-x-sm" key={index}>
-        <Link to={item.address ? item.address : "#"} className="hover:underline">{item.title}</Link>
+        <Link to={item.address ? item.address : "#"}>{item.title}</Link>
       </li>
     ))}
   </ul>
@@ -25,7 +25,7 @@ const Footer = () => {
         </Link>
       </div>
       <div className="flex md:flex-row flex-col">
-        <div className="md:order-1 order-2 mb-[52px]">
+        <div className="md:orr-1 order-2 mb-[52px]">
           <FooterCol
             title="Company"
             items={[
@@ -63,7 +63,7 @@ const Footer = () => {
                 <CircleIcon icon="akar-icons:twitter-fill" />
               </div>
               <div>
-              <CircleIcon icon="akar-icons:linkedin-fill" />
+                <CircleIcon icon="akar-icons:linkedin-fill" />
               </div>
             </div>
           </div>
