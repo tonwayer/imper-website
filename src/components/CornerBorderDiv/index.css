@@ -1,0 +1,35 @@
+.corner-border {
+  position:relative;
+}
+
+.corner-border:before, .corner-border:after, .corner-border>:first-child:before, .corner-border>:first-child:after {
+  position:absolute;
+  width:34px; height: 34px;
+  border-color: white;
+  border-style: solid;
+  content: ' ';
+}
+
+.left-top-corner.corner-border:before {
+  top:0;
+  left:0;
+  border-width: 1px 0 0 1px
+}
+
+.right-top-corner.corner-border:after {
+  top:0;
+  right:0;
+  border-width: 1px 1px 0 0
+}
+
+.right-bottom-corner.corner-border>:first-child:before {
+  bottom:0;
+  right:0;
+  border-width: 0 1px 1px 0
+}
+
+.left-bottom-corner.corner-border>:first-child:after {
+  bottom:0;
+  left:0;
+  border-width: 0 0 1px 1px
+}

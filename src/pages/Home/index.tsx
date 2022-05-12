@@ -1,6 +1,8 @@
-const Home = () => {
+import HeroSection from "../../components/Home/HeroSection"
 
-  return <div>
+const Home = () => {
+  return <div className="text-center md:text-left">
+    <HeroSection />
   </div>
 }
 
