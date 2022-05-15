@@ -7,7 +7,7 @@ const HeroSection = () => (
     <div className="max-w-[587px] md:mb-xx-sm mb-24">
       <CornerBorderDiv className="right-top-corner left-bottom-corner pl-16 pb-16 pt-8">
         <div className="-mr-16">
-          <h2 className="font-bold text-d-lg leading-[64px] mb-2">
+          <h2 className="font-bold text-d-lg leading-[64px] mb-2 text-center md:text-left">
             Imperator.co
             <p>The next level  <br /> of staking services</p>
           </h2>
