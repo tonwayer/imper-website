@@ -15,8 +15,10 @@ const HeroSection = () => (
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum
           </p>
           <Button className="px-[60px] py-4">
-            See the projects
-            <Icon icon="bi:arrow-down" className="ml-md" />
+            <div className="flex items-center">
+              See the projects
+              <Icon icon="bi:arrow-down" className="ml-md" />
+            </div>
           </Button>
         </div>
       </CornerBorderDiv>
