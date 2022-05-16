@@ -3,6 +3,7 @@ import HeroSection from "../../components/Home/HeroSection"
 import InfraSection from "../../components/Home/InfraSection"
 import InstStakerSection from "../../components/Home/InstStakerSection"
 import StakeSection from "../../components/Home/StakeSection"
+import ValueSection from "../../components/Home/ValueSection"
 
 const Home = () => {
   return <div className="text-center md:text-left">
@@ -11,6 +12,7 @@ const Home = () => {
     <CalculatorSection />
     <InstStakerSection />
     <InfraSection />
+    <ValueSection />
   </div>
 }
 
