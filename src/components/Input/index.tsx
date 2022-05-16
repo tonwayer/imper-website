@@ -17,7 +17,7 @@ const Input = (props: Props) => {
         type="text"
         id={props.name}
         className={
-          "bg-[#65474D]  text-sm block p-2.5 rounded-lg text-white border "
+          "bg-[#65474D] w-full text-sm block p-2.5 rounded-lg text-white border "
           + (
             props.error
               ? "border-error focus:ring-error"
