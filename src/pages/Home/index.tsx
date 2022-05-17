@@ -1,4 +1,6 @@
 import CalculatorSection from "../../components/Home/CalculatorSection"
+import ContactSection from "../../components/Home/ContactSection"
+import FAQSection from "../../components/Home/FAQSection"
 import HeroSection from "../../components/Home/HeroSection"
 import InfraSection from "../../components/Home/InfraSection"
 import InstStakerSection from "../../components/Home/InstStakerSection"
@@ -15,6 +17,8 @@ const Home = () => {
     <InfraSection />
     <ValueSection />
     <TeamSection />
+    <FAQSection />
+    <ContactSection />
   </div>
 }
 
