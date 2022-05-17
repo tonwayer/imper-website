@@ -1,5 +1,6 @@
 import CornerBorderDiv from "../CornerBorderDiv"
 import CryptoIconBox from "../CryptoIconBox"
+import Toggle from "../Toggle"
 
 const StakeSection = () => (
   <section>
@@ -16,7 +17,10 @@ const StakeSection = () => (
         </div>
       </CornerBorderDiv>
     </div>
-    <div className="grid md:grid-cols-4 grid-cols-3">
+    <div className="flex justify-center mt-7 mb-16">
+      <Toggle />
+    </div>
+    <div className="grid md:grid-cols-4 grid-cols-3 md:px-[200px]">
       <CryptoIconBox fee={0} label="Icon text label" icon={"crypto_icon_1"} />
       <CryptoIconBox fee={0} label="Icon text label" icon={"crypto_icon_2"} />
       <CryptoIconBox fee={0} label="Icon text label" icon={"crypto_icon_3"} />

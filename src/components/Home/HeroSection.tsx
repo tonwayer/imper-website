@@ -3,11 +3,11 @@ import Button from "../../components/Button"
 import CornerBorderDiv from "../CornerBorderDiv"
 
 const HeroSection = () => (
-  <section>
+  <section className="mt-[115px] md:px-[20px]">
     <div className="max-w-[587px] md:mb-xx-sm mb-24">
-      <CornerBorderDiv className="right-top-corner left-bottom-corner pl-16 pb-16 pt-8">
-        <div className="-mr-16">
-          <h2 className="font-bold text-d-lg leading-[64px] mb-2 text-center md:text-left">
+      <CornerBorderDiv className="md:right-top-corner md:left-bottom-corner md:pl-16 md:pb-16 md:pt-8">
+        <div className="md:-mr-16">
+          <h2 className="font-bold md:text-d-lg leading-[64px] mb-2 text-center md:text-left text-[45px]">
             Imperator.co
             <p>The next level  <br /> of staking services</p>
           </h2>

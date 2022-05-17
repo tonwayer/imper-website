@@ -51,7 +51,7 @@ const ContactSection = () => {
         Send message
       </Button>
       <div className="mt-8">
-        <div className="flex justify-between">
+        <div className="md:flex justify-between">
           <div className="flex items-center">
             <Icon icon="akar-icons:twitter-fill" className="mr-3" /> @imperator_co
           </div>
@@ -59,7 +59,7 @@ const ContactSection = () => {
             <Icon icon="teenyicons:envelope-solid" className="mr-3" /> contact@imperator.co
           </div>
         </div>
-        <div className="flex justify-between mt-5">
+        <div className="md:flex justify-between md:mt-5">
           <div className="flex items-center">
             <Icon icon="fa:paper-plane" className="mr-3" /> t.me/ImperatorAnnouncements
           </div>

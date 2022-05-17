@@ -1,0 +1,14 @@
+.peer::after  {
+  background-color: #BE2A2E;
+  border: none;
+  border-radius: 8px;
+  height: calc(100% - 4px);
+  top: 2px;
+  width: 50%;
+  z-index: 1;
+}
+
+.peer:checked ~ .peer-checked\:after\:translate-x-full::after {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}

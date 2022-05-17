@@ -4,8 +4,8 @@ import Button from "../../components/Button"
 
 const CalculatorSection = () => (
   <section className="mt-[350px]">
-    <div className="flex">
-      <div className="w-1/3 mr-x-huge">
+    <div className="md:flex">
+      <div className="md:w-1/3 md:mr-x-huge">
         <CornerBorderDiv className="right-top-corner left-bottom-corner py-5 px-10">
           <h4 className="font-bold text-md text-primary-500 font-inter mb-2">Simulate your earn</h4>
           <h3 className="font-bold text-[45px] leading-[64px] mb-2 text-center md:text-left">
@@ -18,7 +18,7 @@ const CalculatorSection = () => (
           </p>
         </CornerBorderDiv>
       </div>
-      <div className="w-2/3">
+      <div className="md:w-2/3 md:mt-[85px]">
         <Card>
           <h4 className="font-spaceGrotesk text-2xl font-bold text-center mb-5">
             Simulate your earn
@@ -35,10 +35,10 @@ const CalculatorSection = () => (
           </select>
           <input id="medium-range" type="range" defaultValue="50" className="mb-6 w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer " />
           <div className="flex justify-between">
-            <p>How many assets do you have?</p>
+            <p>How many <span className="text-info">{`{ASSET}`}</span> do you have?</p>
             <p>Yearly return</p>
           </div>
-          <div className="flex justify-between font-spaceGrotesk text-[45px] font-bold">
+          <div className="flex justify-between font-spaceGrotesk md:text-[45px] font-bold text-[32px]">
             <span className="border-b-[1px] border-b-imperGrey">600,000</span>
             <span className="text-success">+17.65%</span>
           </div>

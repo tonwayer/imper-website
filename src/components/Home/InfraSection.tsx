@@ -15,7 +15,7 @@ const InfraSection = () => {
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum
         </p>
       </CornerBorderDiv>
-      <div className="max-w-[340px] mt-6">
+      <div className="max-w-[340px] md:mt-[85px]">
         <img src="/assets/security.png" alt="security" className="w-[150px] h-[150px]" />
         <h4 className="font-spaceGrotesk text-[32px]">Security, <br /> Monitoring & Alerting</h4>
         <p className="font-inter text-imperGrey">
@@ -29,7 +29,7 @@ const InfraSection = () => {
         Benefit from the experience of 2 Data Engineers specialized in DataScience and DevOps who have worked for large international companies.
         </p>
       </div>
-      <div className="max-w-[340px] mt-6">
+      <div className="max-w-[340px] md:mt-12">
         <img src="/assets/servers.png" alt="servers" className="w-[150px] h-[150px]" />
         <h4 className="font-spaceGrotesk text-[32px]">Entreprise-grade infrastructure</h4>
         <p className="font-inter text-imperGrey">

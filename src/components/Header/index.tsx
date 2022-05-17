@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import CircleIcon from "../CircleIcon"
 
 const Header = () => {
-  return <header>
+  return <header className="px-[90px]">
     <div className="flex min-h-[80px] justify-between items-center text-white">
       <div className="flex items-center">
         <img src="/assets/logo.svg" alt="logo" />
