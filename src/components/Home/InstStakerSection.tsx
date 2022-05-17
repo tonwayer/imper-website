@@ -16,8 +16,8 @@ const InstStakerSection = () => {
     },
   });
 
-  return <section>
-    <Card>
+  return <section className="mt-[420px]">
+    <Card className="mx-auto">
       <img src="/assets/coins.png" alt="coins" className="-mt-[150px] w-[415px] mx-auto" />
       <h4 className="font-spaceGrotesk text-2xl font-bold text-center mt-12 mb-5">
         Institutional staker?

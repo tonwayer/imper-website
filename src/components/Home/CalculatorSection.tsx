@@ -3,7 +3,7 @@ import CornerBorderDiv from "../CornerBorderDiv"
 import Button from "../../components/Button"
 
 const CalculatorSection = () => (
-  <section>
+  <section className="mt-[350px]">
     <div className="flex">
       <div className="w-1/3 mr-x-huge">
         <CornerBorderDiv className="right-top-corner left-bottom-corner py-5 px-10">

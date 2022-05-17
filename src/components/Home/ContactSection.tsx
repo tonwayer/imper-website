@@ -18,7 +18,7 @@ const ContactSection = () => {
     },
   });
 
-  return <section>
+  return <section className="mt-[150px] mb-[250px]">
     <Card className="mx-auto">
       <h4 className="font-bold text-md text-primary-300 font-inter mb-2 text-center">
         Still have questions

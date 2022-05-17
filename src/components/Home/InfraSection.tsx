@@ -2,7 +2,7 @@ import CornerBorderDiv from "../CornerBorderDiv"
 
 const InfraSection = () => {
 
-  return <section>
+  return <section className="mt-[320px]">
     <div className="md:grid md:grid-cols-2 gap-36">
       <CornerBorderDiv className="left-top-corner right-bottom-corner p-8 max-w-[360px] ml-auto">
         <h4 className="font-bold text-md text-primary-500 font-inter mb-2">

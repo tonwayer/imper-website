@@ -2,7 +2,7 @@ import TeamMember from "../TeamMember"
 
 const TeamSection = () => {
 
-  return <section>
+  return <section className="mt-[270px]">
     <div className="text-center max-w-md mx-auto mb-10 mt-24">
       <h4 className="font-bold text-md text-primary-500 font-inter mb-2">
         Discover

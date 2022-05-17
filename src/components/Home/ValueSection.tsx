@@ -2,7 +2,7 @@ import CornerBorderDiv from "../CornerBorderDiv"
 
 const ValueSection = () => {
 
-  return <section>
+  return <section className="mt-[250px]">
     <div className="md:grid md:grid-cols-2 gap-36">
       <div className="bg-[#65474D]/50 rounded-2xl p-7 md:max-w-[280px] mx-auto">
         <h3 className="text-[32px] font-spaceGrotesk">Dream Big.</h3>

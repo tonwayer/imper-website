@@ -3,7 +3,7 @@ import CryptoIconBox from "../CryptoIconBox"
 
 const StakeSection = () => (
   <section>
-    <div className="max-w-[587px] mx-auto">
+    <div className="max-w-[587px] mx-auto mt-[200px]">
       <CornerBorderDiv className="left-top-corner right-bottom-corner text-center">
         <div className="pl-lg pb-x-sm pr-xxx-big pt-2">
           <h4 className="font-bold text-md text-primary-500 font-inter mb-2">Stake now</h4>
