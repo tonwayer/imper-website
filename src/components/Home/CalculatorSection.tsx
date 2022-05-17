@@ -1,6 +1,7 @@
 import Card from "../Card"
 import CornerBorderDiv from "../CornerBorderDiv"
 import Button from "../../components/Button"
+import DropDown from "../Dropdown"
 
 const CalculatorSection = () => (
   <section className="mt-[350px]">
@@ -23,16 +24,7 @@ const CalculatorSection = () => (
           <h4 className="font-spaceGrotesk text-2xl font-bold text-center mb-5">
             Simulate your earn
           </h4>
-          <select id="countries" className="bg-[#65474D] mb-8 border text-white text-sm rounded-lg block w-full p-2.5">
-            <option value="1">
-              {/* <img src="/assets/crypto_icon_1.svg" alt="crypto_icon_1.svg" className="w-xxx-big h-xxx-big" /> */}
-              Cosmos
-              {/* <span className="hidden md:block text-[11px] bg-success absolute text-white rounded-[5px] py-1 px-[5px]"> */}
-                0 % fees
-              {/* </span> */}
-            </option>
-            <option value="2">Solana</option>
-          </select>
+          <DropDown />
           <input id="medium-range" type="range" defaultValue="50" className="mb-6 w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer " />
           <div className="flex justify-between">
             <p>How many <span className="text-info">{`{ASSET}`}</span> do you have?</p>
