@@ -1,4 +1,7 @@
 import TeamMember from "../TeamMember"
+import { Carousel } from 'react-responsive-carousel'
+
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 const TeamSection = () => {
 
@@ -14,22 +17,54 @@ const TeamSection = () => {
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum
       </p>
     </div>
+    <Carousel showStatus={false} className="block md:hidden">
+        <TeamMember
+          name="Dilan Asatekin"
+          role="Founder"
+          position="Data Engeineer/Scientist"
+          className="mx-auto" 
+        />
+        <TeamMember
+          name="Dilan Asatekin"
+          role="Founder"
+          position="Data Engeineer/Scientist"
+          className="mx-auto" 
+        />
+        <TeamMember
+          name="Dilan Asatekin"
+          role="Founder"
+          position="Data Engeineer/Scientist"
+          className="mx-auto" 
+        />
+        <TeamMember
+          name="Dilan Asatekin"
+          role="Founder"
+          position="Data Engeineer/Scientist"
+          className="mx-auto" 
+        />
+        <TeamMember
+          name="Dilan Asatekin"
+          role="Founder"
+          position="Data Engeineer/Scientist"
+          className="mx-auto" 
+        />
+    </Carousel>
     <div className="hidden md:block">
-    <div className="flex justify-center">
-      <div className="mr-10">
+      <div className="flex justify-center">
+        <div className="mr-10">
+          <TeamMember name="Dilan Asatekin" role="Founder" position="Data Engeineer/Scientist" />
+        </div>
+        <div className="mr-10">
+          <TeamMember name="Dilan Asatekin" role="Founder" position="Data Engeineer/Scientist" />
+        </div>
         <TeamMember name="Dilan Asatekin" role="Founder" position="Data Engeineer/Scientist" />
       </div>
-      <div className="mr-10">
+      <div className="flex justify-center mt-11">
+        <div className="mr-10">
+          <TeamMember name="Dilan Asatekin" role="Founder" position="Data Engeineer/Scientist" />
+        </div>
         <TeamMember name="Dilan Asatekin" role="Founder" position="Data Engeineer/Scientist" />
       </div>
-      <TeamMember name="Dilan Asatekin" role="Founder" position="Data Engeineer/Scientist" />
-    </div>
-    <div className="flex justify-center mt-11">
-      <div className="mr-10">
-        <TeamMember name="Dilan Asatekin" role="Founder" position="Data Engeineer/Scientist" />
-      </div>
-      <TeamMember name="Dilan Asatekin" role="Founder" position="Data Engeineer/Scientist" />
-    </div>
     </div>
   </section>
 }

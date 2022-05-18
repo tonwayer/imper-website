@@ -25,7 +25,14 @@ const CalculatorSection = () => (
             Simulate your earn
           </h4>
           <DropDown />
-          <input id="medium-range" type="range" defaultValue="50" className="mb-6 w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer " />
+          <div className="relative my-4">
+            <div className="bg-[#3f5d4a] rounded-full overflow-hidden">
+              <div className="bg-success w-1/2 h-4" role="progressbar" aria-label="music progress">
+              </div>
+            </div>
+            <div className="bg-white absolute left-1/2 top-1/2 w-4 h-4 -mt-2 -ml-2 flex items-center justify-center rounded-full shadow border-0">
+            </div>
+          </div>
           <div className="flex justify-between">
             <p>How many <span className="text-info">{`{ASSET}`}</span> do you have?</p>
             <p>Yearly return</p>

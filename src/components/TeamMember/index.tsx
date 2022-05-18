@@ -3,9 +3,10 @@ type Props = {
   name: string,
   role: string,
   position: string,
+  className?: string
 }
 const TeamMember = (props: Props) => {
-  return <div className="bg-[#65474D]/50 p-7 px-10 max-w-[300px] flex flex-col items-center rounded-2xl">
+  return <div className={`bg-[#65474D]/50 p-7 px-10 max-w-[300px] flex flex-col items-center rounded-2xl ${props.className ? props.className : ''}`}>
     <div>
       <img src="/assets/default_avatar.svg" alt="avatar" className="mx-auto" />
     </div>
