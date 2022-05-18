@@ -12,7 +12,7 @@ const Header = () => {
       <div className="font-inter text-[14px] md:flex hidden">
         <Link to="/#home" className="mr-xxx-big">Home</Link>
         <Link to="/#home" className="mr-xxx-big">Projects</Link>
-        <Link to="/#home" className="mr-xxx-big">Calculator</Link>
+        <Link to="/calculator" className="mr-xxx-big">Calculator</Link>
         <Link to="/#home" className="mr-xxx-big">Instituional staker</Link>
         <Link to="/#home" className="mr-xxx-big">Venture Captial</Link>
         <Link to="/#home" className="mr-xxx-big">Blog</Link>

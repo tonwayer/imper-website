@@ -29,9 +29,9 @@ const Footer = () => {
           <FooterCol
             title="Company"
             items={[
-              { title: "Home" },
+              { title: "Home", address: "/home" },
               { title: "Project" },
-              { title: "Calculator" },
+              { title: "Calculator", address: "/calculator" },
               { title: "Institutional Staker" },
               { title: "Venture Capital" },
               { title: "Blog" },
