@@ -1,3 +1,4 @@
+import "./index.css"
 
 type Props = {
   icon: string,
@@ -5,7 +6,7 @@ type Props = {
   label: string
 }
 
-const CryptoIconBox = (props: Props) => <div className="text-left relative mb-[70px]">
+const CryptoIconBox = (props: Props) => <div className="text-left relative mb-[60px]">
   {
     props.fee === undefined
       ? null
@@ -14,8 +15,8 @@ const CryptoIconBox = (props: Props) => <div className="text-left relative mb-[7
       </span>
   }
   <div className="text-center flex flex-col items-center mt-3">
-    <img src={`/assets/${props.icon}.svg`} alt={props.icon} className="w-[60px] h-[60px] mb-[6px]" />
-    <p>{props.label}</p>
+    <img src={`/assets/${props.icon}.svg`} alt={props.icon} className="w-[60px] h-[60px] mb-[6px] icon-shadow" />
+    <p className="text-[14px]">{props.label}</p>
     <p className="text-success">%APY</p>
   </div>
 </div>

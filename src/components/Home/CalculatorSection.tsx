@@ -4,22 +4,22 @@ import Button from "../../components/Button"
 import DropDown from "../Dropdown"
 
 const CalculatorSection = () => (
-  <section className="mt-[350px]">
+  <section className="md:mt-[330px] md:px-[10px]">
     <div className="md:flex">
-      <div className="md:w-1/3 md:mr-x-huge">
-        <CornerBorderDiv className="right-top-corner left-bottom-corner py-5 px-10">
+      <div className="md:w-2/5 md:mr-x-huge">
+        <CornerBorderDiv className="right-top-corner left-bottom-corner py-5 px-10 pb-8">
           <h4 className="font-bold text-md text-primary-500 font-inter mb-2">Simulate your earn</h4>
-          <h3 className="font-bold text-[45px] leading-[64px] mb-2 text-center md:text-left">
+          <h3 className="medium-title mb-2 text-center md:text-left">
             Calculator
           </h3>
-          <p className="font-inter mb-x-big text-sm">
+          <p className="font-inter mb-x-big text-base">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
             sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
             sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum
           </p>
         </CornerBorderDiv>
       </div>
-      <div className="md:w-2/3 md:mt-[85px]">
+      <div className="md:w-3/5 md:mt-[85px]">
         <Card>
           <h4 className="font-spaceGrotesk text-2xl font-bold text-center mb-5">
             Simulate your earn

@@ -16,16 +16,16 @@ const InstStakerSection = () => {
     },
   });
 
-  return <section className="mt-[420px]">
-    <Card className="mx-auto">
+  return <section className="mt-[435px]">
+    <Card className="mx-auto max-w-[590px]">
       <img src="/assets/coins.png" alt="coins" className="-mt-[150px] w-[415px] mx-auto" />
-      <h4 className="font-spaceGrotesk text-2xl font-bold text-center mt-12 mb-5">
+      <h4 className="medium-title text-4xl text-center mt-14 mb-3">
         Institutional staker?
       </h4>
-      <p>
+      <p className="label-large text-center">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vel vulputate vivamus turpis suspendisse vel. In quisque neque dolor morbi quam hac non.
       </p>
-      <div className="grid md:grid-cols-2 gap-4 mt-6">
+      <div className="grid md:grid-cols-2 gap-4 mt-5">
         <div>
           <Input label="Name" name="name" error={false} value={formik.values.name} handleChange={formik.handleChange} />
         </div>

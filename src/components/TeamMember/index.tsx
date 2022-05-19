@@ -10,11 +10,11 @@ const TeamMember = (props: Props) => {
     <div>
       <img src="/assets/default_avatar.svg" alt="avatar" className="mx-auto" />
     </div>
-    <p className="mt-4">{props.name}</p>
+    <p className="mt-4 title-large">{props.name}</p>
     <p>{props.role}</p>
     <p className="mt-8">{props.position}</p>
-    <div className="w-full mt-8">
-      <div className="flex justify-around">
+    <div className="w-full mt-10">
+      <div className="flex justify-around mx-6">
         <CircleIcon icon="akar-icons:linkedin-fill" classNames="w-x-big h-x-big bg-[#2E2224]" fontSize="12px" />
         <CircleIcon icon="akar-icons:github-fill" classNames="w-x-big h-x-big bg-[#2E2224]" fontSize="12px" />
       </div>

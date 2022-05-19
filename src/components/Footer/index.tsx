@@ -6,7 +6,7 @@ const FooterCol = (props: { title: string, items: Array<{ title: string, address
   <h2 className="mb-md text-[24px] font-semibold font-spaceGrotesk text-white">{props.title}</h2>
   <ul className="text-imperGrey">
     {props.items.map((item, index) => (
-      <li className="mb-x-sm" key={index}>
+      <li className="mb-1" key={index}>
         <Link to={item.address ? item.address : "#"}>{item.title}</Link>
       </li>
     ))}
@@ -14,18 +14,17 @@ const FooterCol = (props: { title: string, items: Array<{ title: string, address
 </div>
 
 const Footer = () => {
-  return <footer className="text-white md:text-left text-center pt-[100px]">
+  return <footer className="text-white md:text-left text-center pt-[100px] md:px-[170px]">
     <div className="md:flex md:justify-between">
       <div className="md:block flex md:justify-start justify-center mb-[54px]">
         <Link to="/#" className="flex items-center">
           <div className="flex items-center">
             <img src="/assets/logo.svg" alt="logo" />
-            Imperator
           </div>
         </Link>
       </div>
       <div className="flex md:flex-row flex-col">
-        <div className="md:orr-1 order-2 mb-[52px]">
+        <div className="md:order-1 order-2 mb-[52px]">
           <FooterCol
             title="Company"
             items={[

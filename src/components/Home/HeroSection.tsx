@@ -5,7 +5,7 @@ import CornerBorderDiv from "../CornerBorderDiv"
 const HeroSection = () => (
   <section className="mt-[115px] md:px-[20px]">
     <div className="max-w-[587px] md:mb-xx-sm mb-24">
-      <CornerBorderDiv className="md:right-top-corner md:left-bottom-corner md:pl-16 md:pb-16 md:pt-8">
+      <CornerBorderDiv className="right-top-corner left-bottom-corner md:pl-16 md:pb-16 md:pt-8">
         <div className="md:-mr-16">
           <h2 className="font-bold md:text-d-lg leading-[64px] mb-2 text-center md:text-left text-[45px]">
             Imperator.co
@@ -23,7 +23,7 @@ const HeroSection = () => (
         </div>
       </CornerBorderDiv>
     </div>
-    <div className="md:grid md:grid-cols-4">
+    <div className="md:grid md:grid-cols-4 md:ml-[110px] md:-mt-5">
       <div className="col-end-4">
         <div className="mb-md">
           <span>More than</span>
@@ -44,7 +44,7 @@ const HeroSection = () => (
           </span>
         </div>
       </div>
-      <div className="col-end-5">
+      <div className="col-end-5 md:mt-3">
         <div className="mb-md">
           <span>We operate on</span>
           <h2 className="font-bold text-d-lg leading-[64px]">
