@@ -6,7 +6,7 @@ type Props = {
   label: string
 }
 
-const CryptoIconBox = (props: Props) => <div className="text-left relative mb-[60px]">
+const CryptoIconBox = (props: Props) => <div className="text-left relative md:mb-[60px] mb-8">
   {
     props.fee === undefined
       ? null

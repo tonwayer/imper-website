@@ -5,8 +5,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 
 const TeamSection = () => {
 
-  return <section className="mt-[270px]">
-    <div className="text-center max-w-md mx-auto mb-20 mt-24">
+  return <section className="md:mt-[270px] mt-[80px]">
+    <div className="text-center max-w-md mx-auto mb-20 md:mt-24">
       <h4 className="font-bold text-md text-primary-500 font-inter mb-2">
         Discover
       </h4>
@@ -17,7 +17,7 @@ const TeamSection = () => {
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum
       </p>
     </div>
-    <Carousel showStatus={false} className="block md:hidden">
+    <Carousel showStatus={false} className="block md:hidden" showThumbs={false} >
         <TeamMember
           name="Dilan Asatekin"
           role="Founder"

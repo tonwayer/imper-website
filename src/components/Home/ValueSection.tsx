@@ -2,16 +2,16 @@ import CornerBorderDiv from "../CornerBorderDiv"
 
 const ValueSection = () => {
 
-  return <section className="mt-[230px]">
+  return <section className="md:mt-[230px]">
     <div className="md:px-[150px]">
-      <div className="md:flex justify-between">
-        <div className="bg-[#65474D]/50 rounded-2xl p-7 md:max-w-[280px] md:mt-[145px] md:ml-16">
+      <div className="md:flex-row justify-between flex-col flex">
+        <div className=" text-left md:mb-0 mb-6 order-2 md:order-1 bg-[#65474D]/50 rounded-2xl p-7 md:max-w-[280px] md:mt-[145px] md:ml-16">
           <h3 className="text-[32px] font-spaceGrotesk">Dream Big.</h3>
           <p className="mt-4 label-large">
             We think big, take smart risks, and do things that have never been done before. We are not afraid to make tough choices that align with our long-term objectives. We know that it always seems impossible until it’s done
           </p>
         </div>
-        <div>
+        <div className="order-1 md:order-2">
           <CornerBorderDiv className="right-top-corner left-bottom-corner p-8 max-w-[360px]">
             <h4 className="font-bold text-md text-primary-500 font-inter mb-2">
               This is
@@ -25,8 +25,8 @@ const ValueSection = () => {
           </CornerBorderDiv>
         </div>
       </div>
-      <div className="md:flex justify-between md:mt-6 md:ml-12">
-        <div className="bg-[#65474D]/50 rounded-2xl p-7 md:max-w-[290px] md:mr-[80px] md:mt-[80px]">
+      <div className="md:flex justify-between md:mt-6 md:ml-12 text-left">
+        <div className="md:mb-0 mb-6 bg-[#65474D]/50 rounded-2xl p-7 md:max-w-[290px] md:mr-[80px] md:mt-[80px]">
           <h3 className="text-[32px] font-spaceGrotesk">Stay Determined.</h3>
           <p className="mt-4 label-large">
             We never give up, carry each other through hard times, and recognise grit in our colleagues. We understand that building a world-changing company is a monumental task, but we love every minute of it We celebrate milestones together, recharge, and get back to work

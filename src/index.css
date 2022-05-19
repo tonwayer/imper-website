@@ -21,7 +21,6 @@ code {
   text-align: left;
 }
 
-
 .label-large {
   font-family: Inter;
   font-size: 14px;
@@ -55,4 +54,13 @@ code {
   line-height: 28px;
   letter-spacing: 0em;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .calc-card {
+    background-color: unset !important;
+    border: none;
+    padding: 16px !important;
+    padding-top: 0px !important;
+  }
 }

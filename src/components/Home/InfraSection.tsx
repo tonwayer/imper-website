@@ -2,14 +2,14 @@ import CornerBorderDiv from "../CornerBorderDiv"
 
 const InfraSection = () => {
 
-  return <section className="mt-[320px]">
+  return <section className="md:mt-[320px] mt-[70px]">
     <div className="md:grid md:grid-cols-2">
       <div className="md:mr-10">
-        <CornerBorderDiv className="left-top-corner right-bottom-corner p-8 max-w-[380px] ml-auto">
-          <h4 className="font-bold text-md text-primary-500 font-inter mb-2">
+        <CornerBorderDiv className="left-top-corner right-bottom-corner md:p-8 max-w-[380px] ml-auto">
+          <h4 className="font-bold text-md text-primary-500 font-inter mb-2 text-left">
             We provide reliable infrastructure for next generation technologies
           </h4>
-          <h3 className="font-bold text-[45px] leading-[64px] mb-2 text-center md:text-left">
+          <h3 className="md:text-4xl text-[36px] font-bold leading-[64px] mb-2 text-left">
             Infrastructure
           </h3>
           <p className="title-medium">
@@ -17,21 +17,21 @@ const InfraSection = () => {
           </p>
         </CornerBorderDiv>
       </div>
-      <div className="max-w-[340px] md:mt-[85px] md:ml-[120px]">
+      <div className="max-w-[340px] md:mt-[85px] md:ml-[120px] mt-10">
         <img src="/assets/security.png" alt="security" className="w-[140px] h-[140px]" />
         <h4 className="headline-large">Security, <br /> Monitoring & Alerting</h4>
         <p className="label-large text-left">
           Reducing risk with physical, highly renowned, Hardware Security Module. Monitoring and alerting 24/7 with a home-made overlay to meet our most demanding monitoring and analysis needs.
         </p>
       </div>
-      <div className="max-w-[190px] mt-[80px] ml-auto mr-5">
+      <div className="md:max-w-[190px] md:mt-[80px] md:ml-auto mr-5 mt-10">
         <img src="/assets/gigs.png" alt="gigs" className="w-[150px] h-[150px]" />
         <h4 className="headline-large">Engineering</h4>
         <p className="label-large text-left">
           Benefit from the experience of 2 Data Engineers specialized in DataScience and DevOps who have worked for large international companies.
         </p>
       </div>
-      <div className="max-w-[265px] md:ml-[120px] md:mt-[110px]">
+      <div className="md:max-w-[265px] md:ml-[120px] md:mt-[110px] mt-10">
         <img src="/assets/servers.png" alt="servers" className="w-[150px] h-[150px]" />
         <h4 className="headline-large">Entreprise-grade infrastructure</h4>
         <p className="label-large text-left md:mt-5">

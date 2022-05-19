@@ -16,10 +16,10 @@ const InstStakerSection = () => {
     },
   });
 
-  return <section className="mt-[435px]">
+  return <section className="md:mt-[435px] mt-[180px]">
     <Card className="mx-auto max-w-[590px]">
-      <img src="/assets/coins.png" alt="coins" className="-mt-[150px] w-[415px] mx-auto" />
-      <h4 className="medium-title text-4xl text-center mt-14 mb-3">
+      <img src="/assets/coins.png" alt="coins" className="md:-mt-[150px] -mt-[100px] w-[415px] mx-auto" />
+      <h4 className="medium-title md:text-4xl text-2xl text-center md:mt-14 mt-2 mb-3">
         Institutional staker?
       </h4>
       <p className="label-large text-center">

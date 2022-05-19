@@ -9,7 +9,7 @@ type Props = {
 
 const Input = (props: Props) => {
   return <>
-    <div>
+    <div className=" text-left">
       <label className="mb-2 text-sm font-medium text-[#E5E7EB]">
         {props.label}
       </label>

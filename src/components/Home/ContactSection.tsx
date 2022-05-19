@@ -18,8 +18,8 @@ const ContactSection = () => {
     },
   });
 
-  return <section className="mt-[200px] mb-[250px]">
-    <Card className="mx-auto max-w-[580px]">
+  return <section className="md:mt-[200px] md:mb-[250px] mt-[90px] mb-[70px]">
+    <Card className="mx-auto max-w-[580px] calc-card">
       <h4 className="font-bold text-md text-primary-300 font-inter mb-2 text-center">
         Still have questions
       </h4>
@@ -29,15 +29,15 @@ const ContactSection = () => {
       <p className="text-center font-bold px-5">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vel vulputate vivamus turpis suspendisse vel. In quisque neque dolor morbi quam hac non.
       </p>
-      <div className="flex mt-8">
-        <div className="w-1/2 mr-4">
+      <div className="flex mt-8 flex-col md:flex-row">
+        <div className="md:w-1/2 md:mr-4">
           <Input label="Name" name="name" error={false} value={formik.values.name} handleChange={formik.handleChange} />
         </div>
-        <div className="w-1/2">
+        <div className="md:w-1/2 mt-2 md:mt-0">
           <Input label="Email address" name="email" error={false} value={formik.values.email} handleChange={formik.handleChange} />
         </div>
       </div>
-      <div className="mt-4">
+      <div className="mt-4 text-left">
         <label className="mb-2 text-sm font-medium text-[#E5E7EB]">
           Message
         </label>
