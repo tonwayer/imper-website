@@ -6,7 +6,7 @@ type Props = {
   children: React.ReactNode
 }
 
-const  FadeInSection = (props: Props) => {
+const FadeInSection = (props: Props) => {
   const [isVisible, setVisible] = React.useState(false)
   const domRef = React.useRef<HTMLDivElement | null>(null)
 
