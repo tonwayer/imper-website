@@ -1,16 +1,17 @@
 import { Icon } from "@iconify/react"
 import Button from "../../components/Button"
 import CornerBorderDiv from "../CornerBorderDiv"
+import FadeInSection from "../FadeInSection"
 
-const HeroSection = () => (
-  <section className="mt-[115px] md:px-[20px]">
+const HeroSection = () => {
+  return <section className="mt-[115px] md:px-[20px]">
     <div className="max-w-[587px] md:mb-xx-sm mb-[80px]">
       <CornerBorderDiv className="block md:hidden mt-[290px]">
         <div className="md:-mr-16">
-          <h2 className="font-bold md:text-d-lg leading-[52px] mb-2 text-center md:text-left text-[45px]">
+          <FadeInSection>
             Imperator.co
+          </FadeInSection>
             <p>The next level  <br /> of staking services</p>
-          </h2>
           <p className="font-inter mb-x-big text-sm">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
           </p>
@@ -25,8 +26,10 @@ const HeroSection = () => (
       <CornerBorderDiv className="hidden md:block right-top-corner left-bottom-corner md:pl-16 md:pb-16 md:pt-8">
         <div className="md:-mr-16">
           <h2 className="font-bold md:text-d-lg leading-[64px] mb-2 text-center md:text-left text-[45px]">
-            Imperator.co
-            <p>The next level  <br /> of staking services</p>
+            <FadeInSection>
+              Imperator.co
+            </FadeInSection>
+              <p>The next level  <br /> of staking services</p>
           </h2>
           <p className="font-inter mb-x-big text-sm">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum
@@ -83,6 +86,6 @@ const HeroSection = () => (
       </div>
     </div>
   </section>
-)
+}
 
 export default HeroSection
