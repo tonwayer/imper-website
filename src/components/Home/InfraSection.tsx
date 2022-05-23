@@ -1,4 +1,5 @@
 import CornerBorderDiv from "../CornerBorderDiv"
+import FadeInSection from "../FadeInSection"
 
 const InfraSection = () => {
 
@@ -6,15 +7,19 @@ const InfraSection = () => {
     <div className="md:grid md:grid-cols-2">
       <div className="md:mr-10">
         <CornerBorderDiv className="left-top-corner right-bottom-corner md:p-8 max-w-[380px] ml-auto">
-          <h4 className="font-bold text-md text-primary-500 font-inter mb-2 text-left">
-            We provide reliable infrastructure for next generation technologies
-          </h4>
-          <h3 className="md:text-4xl text-[36px] font-bold leading-[64px] mb-2 text-left">
-            Infrastructure
-          </h3>
-          <p className="title-medium">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum
-          </p>
+          <div>
+            <FadeInSection>
+              <h4 className="font-bold text-md text-primary-500 font-inter mb-2 text-left">
+                We provide reliable infrastructure for next generation technologies
+              </h4>
+              <h3 className="md:text-4xl text-[36px] font-bold leading-[64px] mb-2 text-left">
+                Infrastructure
+              </h3>
+            </FadeInSection>
+            <p className="title-medium">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum
+            </p>
+          </div>
         </CornerBorderDiv>
       </div>
       <div className="max-w-[340px] md:mt-[85px] md:ml-[120px] mt-10">

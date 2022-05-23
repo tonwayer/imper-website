@@ -2,16 +2,18 @@ import { Icon } from "@iconify/react"
 import Button from "../../components/Button"
 import CornerBorderDiv from "../CornerBorderDiv"
 import FadeInSection from "../FadeInSection"
+import Lode from "../Lode"
 
 const HeroSection = () => {
   return <section className="mt-[115px] md:px-[20px]">
+    <Lode />
     <div className="max-w-[587px] md:mb-xx-sm mb-[80px]">
       <CornerBorderDiv className="block md:hidden mt-[290px]">
         <div className="md:-mr-16">
           <FadeInSection>
             Imperator.co
           </FadeInSection>
-            <p>The next level  <br /> of staking services</p>
+          <p>The next level  <br /> of staking services</p>
           <p className="font-inter mb-x-big text-sm">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
           </p>
@@ -29,7 +31,7 @@ const HeroSection = () => {
             <FadeInSection>
               Imperator.co
             </FadeInSection>
-              <p>The next level  <br /> of staking services</p>
+            <p>The next level  <br /> of staking services</p>
           </h2>
           <p className="font-inter mb-x-big text-sm">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum
@@ -45,44 +47,52 @@ const HeroSection = () => {
     </div>
     <div className="md:grid md:grid-cols-4 md:ml-[110px] md:-mt-5">
       <div className="col-end-4">
-        <div className="md:mb-md mb-[70px]">
-          <span>More than</span>
-          <h2 className="font-bold text-d-lg leading-[64px]">
-            5000
-          </h2>
-          <span>
-            Customers worldwide
-          </span>
-        </div>
-        <div className="md:mb-md mb-[70px]">
-          <span>More than</span>
-          <h2 className="font-bold text-d-lg leading-[64px]">
-            15M
-          </h2>
-          <span>
-            Delegated to us
-          </span>
-        </div>
+        <FadeInSection>
+          <div className="md:mb-md mb-[70px]">
+            <span>More than</span>
+            <h2 className="font-bold text-d-lg leading-[64px]">
+              5000
+            </h2>
+            <span>
+              Customers worldwide
+            </span>
+          </div>
+        </FadeInSection>
+        <FadeInSection>
+          <div className="md:mb-md mb-[70px]">
+            <span>More than</span>
+            <h2 className="font-bold text-d-lg leading-[64px]">
+              15M
+            </h2>
+            <span>
+              Delegated to us
+            </span>
+          </div>
+        </FadeInSection>
       </div>
-      <div className="col-end-5 md:mt-3">
-        <div className="md:mb-md mb-[70px]">
-          <span>We operate on</span>
-          <h2 className="font-bold text-d-lg leading-[64px]">
-            147
-          </h2>
-          <span>
-            Projects
-          </span>
-        </div>
-        <div className="md:mb-md">
-          <span>More than</span>
-          <h2 className="font-bold text-d-lg leading-[64px]">
-            $35M
-          </h2>
-          <span>
-            Distributed revenues
-          </span>
-        </div>
+      <div className="col-end-5 md:mt-1">
+        <FadeInSection>
+          <div className="md:mb-md mb-[70px]">
+            <span>We operate on</span>
+            <h2 className="font-bold text-d-lg leading-[64px]">
+              147
+            </h2>
+            <span>
+              Projects
+            </span>
+          </div>
+        </FadeInSection>
+        <FadeInSection>
+          <div className="md:mb-md">
+            <span>More than</span>
+            <h2 className="font-bold text-d-lg leading-[64px]">
+              $35M
+            </h2>
+            <span>
+              Distributed revenues
+            </span>
+          </div>
+        </FadeInSection>
       </div>
     </div>
   </section>

@@ -2,26 +2,31 @@ import Card from "../Card"
 import CornerBorderDiv from "../CornerBorderDiv"
 import Button from "../../components/Button"
 import DropDown from "../Dropdown"
+import FadeInSection from "../FadeInSection"
 
 const CalculatorSection = () => (
   <section className="md:mt-[330px] md:px-[10px]">
     <div className="md:flex">
       <div className="md:w-2/5 md:mr-x-huge">
         <CornerBorderDiv className="right-top-corner left-bottom-corner md:py-5 md:px-10 md:pb-8">
-          <h4 className="font-bold text-md text-primary-500 font-inter mb-2">Simulate your earn</h4>
-          <h3 className="medium-title mb-2 text-center md:text-left">
-            Calculator
-          </h3>
-          <p className="hidden md:block font-inter mb-x-big text-base">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum
-          </p>
-          <p className="block md:hidden font-inter mb-x-big text-base">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-            sed diam voluptua.
-          </p>
+          <div>
+            <FadeInSection>
+              <h4 className="font-bold text-md text-primary-500 font-inter mb-2">Simulate your earn</h4>
+              <h3 className="medium-title mb-2 text-center md:text-left">
+                Calculator
+              </h3>
+            </FadeInSection>
+            <p className="hidden md:block font-inter mb-x-big text-base">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+              sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+              sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum
+            </p>
+            <p className="block md:hidden font-inter mb-x-big text-base">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+              sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+              sed diam voluptua.
+            </p>
+          </div>
         </CornerBorderDiv>
       </div>
       <div className="md:w-3/5 md:mt-[85px]">

@@ -2,7 +2,6 @@ import React from "react"
 
 import Footer from "../Footer"
 import Header from "../Header"
-import Lode from "../Lode"
 import "./index.css"
 
 type Props = {
@@ -11,7 +10,6 @@ type Props = {
 const Layout = (props:Props) => {
   return <div className="bg-[#2E2224] md:px-x-huge px-4 relative overflow-hidden main">
     <Header />
-    <Lode />
     <div className="z-40 relative">{props.children}</div>
     <Footer />
     <div className="ellipse26 z-0" />

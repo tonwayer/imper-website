@@ -1,5 +1,6 @@
 import CornerBorderDiv from "../CornerBorderDiv"
 import CryptoIconBox from "../CryptoIconBox"
+import FadeInSection from "../FadeInSection"
 import Toggle from "../Toggle"
 
 const StakeSection = () => (
@@ -7,10 +8,12 @@ const StakeSection = () => (
     <div className="max-w-[587px] mx-auto md:mt-[155px] mt-[30px]">
       <CornerBorderDiv className="left-top-corner right-bottom-corner text-center">
         <div className="md:pl-lg md:pb-[42px] md:pr-xxx-big pt-2">
-          <h4 className="font-bold text-md text-primary-500 font-inter mb-2">Stake now</h4>
-          <h3 className="font-bold md:text-[45px] md:leading-[64px] text-4xl mb-2 text-center md:text-left">
-            Our supported projects
-          </h3>
+          <FadeInSection>
+            <h4 className="font-bold text-md text-primary-500 font-inter mb-2">Stake now</h4>
+            <h3 className="font-bold md:text-[45px] md:leading-[64px] text-4xl mb-2 text-center md:text-left">
+              Our supported projects
+            </h3>
+          </FadeInSection>
           <p className="font-inter mb-x-big text-sm">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum
           </p>
