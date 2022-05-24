@@ -1,10 +1,33 @@
+import React from 'react'
+
 import CornerBorderDiv from "../CornerBorderDiv"
 import CryptoIconBox from "../CryptoIconBox"
 import FadeInSection from "../FadeInSection"
 import Toggle from "../Toggle"
 
-const StakeSection = () => (
-  <section>
+const StakeSection = () => {
+  const [isVisible, setVisible] = React.useState(false)
+  const domRef = React.useRef<HTMLDivElement | null>(null)
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => setVisible(entry.isIntersecting))
+    });
+    if (domRef?.current) {
+
+      observer.observe(domRef.current)
+    }
+  }, [domRef])
+
+  return <section>
+    <div className='md:block hidden'>
+      <div ref={domRef} className={`absolute mt-36 -left-[470px] ${isVisible ? 'translate-x-[220px]' : ''}`} style={{ transition: 'transform 1s ease-in-out 0.5s' }}>
+        <img src="/assets/pilonne1.png" alt="plonne1" />
+      </div>
+      <div ref={domRef} className={`absolute mt-36 -right-[440px] ${isVisible ? '-translate-x-[220px]' : ''}`} style={{ transition: 'transform 1s ease-in-out 0.5s' }}>
+        <img src="/assets/pilonne2.png" alt="plonne2" />
+      </div>
+    </div>
     <div className="max-w-[587px] mx-auto md:mt-[155px] mt-[30px]">
       <CornerBorderDiv className="left-top-corner right-bottom-corner text-center">
         <div className="md:pl-lg md:pb-[42px] md:pr-xxx-big pt-2">
@@ -56,6 +79,6 @@ const StakeSection = () => (
       <CryptoIconBox label="Icon text label" icon={"crypto_icon_4"} />
     </div>
   </section>
-)
+}
 
 export default StakeSection

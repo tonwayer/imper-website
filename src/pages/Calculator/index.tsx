@@ -103,7 +103,7 @@ const Home = () => {
         </div>
       </section>
     </FadeInSection>
-    <section className="mt-[280px]">
+    <section className="mt-[280px] md:mt-[350px]">
       <Card className="mx-auto">
         <img src="/assets/coins.png" alt="coins" className="-mt-[150px] w-[415px] mx-auto" />
         <h4 className="font-bold text-md text-primary-500 font-inter mb-2 text-center mt-4">

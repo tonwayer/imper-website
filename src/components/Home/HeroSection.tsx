@@ -5,15 +5,17 @@ import FadeInSection from "../FadeInSection"
 import Lode from "../Lode"
 
 const HeroSection = () => {
-  return <section className="mt-[115px] md:px-[20px]">
+  return <section className="md:mt-[115px] md:px-[20px] mt-0">
     <Lode />
     <div className="max-w-[587px] md:mb-xx-sm mb-[80px]">
-      <CornerBorderDiv className="block md:hidden mt-[290px]">
+      <CornerBorderDiv className="block md:hidden pt-[290px]">
         <div className="md:-mr-16">
-          <FadeInSection>
-            Imperator.co
-          </FadeInSection>
-          <p>The next level  <br /> of staking services</p>
+          <h2 className="font-bold md:text-d-lg leading-[64px] mb-2 text-center md:text-left text-[45px]">
+            <FadeInSection>
+              Imperator.co
+            </FadeInSection>
+            <p>Venture Capital</p>
+          </h2>
           <p className="font-inter mb-x-big text-sm">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
           </p>
