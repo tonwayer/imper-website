@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import CircleIcon from "../CircleIcon"
 type Props = {
   name: string,
@@ -15,8 +16,12 @@ const TeamMember = (props: Props) => {
     <p className="mt-8">{props.position}</p>
     <div className="w-full mt-10">
       <div className="flex justify-around mx-6">
-        <CircleIcon icon="akar-icons:linkedin-fill" classNames="w-x-big h-x-big bg-[#2E2224]" fontSize="12px" />
-        <CircleIcon icon="akar-icons:github-fill" classNames="w-x-big h-x-big bg-[#2E2224]" fontSize="12px" />
+        <Link className="cursor-pointer" to="#">
+          <CircleIcon icon="akar-icons:linkedin-fill" classNames="w-x-big h-x-big bg-[#2E2224]" fontSize="12px" />
+        </Link>
+        <Link className="cursor-pointer" to="#">
+          <CircleIcon icon="akar-icons:github-fill" classNames="w-x-big h-x-big bg-[#2E2224]" fontSize="12px" />
+        </Link>
       </div>
     </div>
   </div>

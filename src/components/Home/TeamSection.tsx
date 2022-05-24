@@ -1,8 +1,9 @@
 import TeamMember from "../TeamMember"
 import { Carousel } from 'react-responsive-carousel'
 
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import FadeInSection from "../FadeInSection";
+import "react-responsive-carousel/lib/styles/carousel.min.css"
+import FadeInSection from "../FadeInSection"
+import Hover3D from "../Hover3D"
 
 const TeamSection = () => {
 
@@ -24,49 +25,59 @@ const TeamSection = () => {
       <TeamMember
         name="Dilan Asatekin"
         role="Founder"
-        position="Data Engeineer/Scientist"
+        position="Data Engineer/Scientist"
         className="mx-auto"
       />
       <TeamMember
         name="Dilan Asatekin"
         role="Founder"
-        position="Data Engeineer/Scientist"
+        position="Data Engineer/Scientist"
         className="mx-auto"
       />
       <TeamMember
         name="Dilan Asatekin"
         role="Founder"
-        position="Data Engeineer/Scientist"
+        position="Data Engineer/Scientist"
         className="mx-auto"
       />
       <TeamMember
         name="Dilan Asatekin"
         role="Founder"
-        position="Data Engeineer/Scientist"
+        position="Data Engineer/Scientist"
         className="mx-auto"
       />
       <TeamMember
         name="Dilan Asatekin"
         role="Founder"
-        position="Data Engeineer/Scientist"
+        position="Data Engineer/Scientist"
         className="mx-auto"
       />
     </Carousel>
     <div className="hidden md:block">
       <div className="flex justify-center">
         <div className="mr-10">
-          <TeamMember name="Dilan Asatekin" role="Founder" position="Data Engeineer/Scientist" />
+          <Hover3D>
+            <TeamMember name="Dilan Asatekin" role="Founder" position="Data Engineer/Scientist" />
+          </Hover3D>
         </div>
-        <div className="mr-10">
-          <TeamMember name="Dilan Asatekin" role="Founder" position="Data Engeineer/Scientist" />
+        <div className="mr-10 relative">
+          <Hover3D>
+            <TeamMember name="Dilan Asatekin" role="Founder" position="Data Engineer/Scientist" />
+          </Hover3D>
         </div>
-        <TeamMember name="Dilan Asatekin" role="Founder" position="Data Engeineer/Scientist" />
+        <Hover3D>
+          <TeamMember name="Dilan Asatekin" role="Founder" position="Data Engineer/Scientist" />
+        </Hover3D>
       </div>
       <div className="flex justify-center mt-11">
         <div className="mr-10">
-          <TeamMember name="Dilan Asatekin" role="Founder" position="Data Engeineer/Scientist" />
+          <Hover3D>
+            <TeamMember name="Dilan Asatekin" role="Founder" position="Data Engineer/Scientist" />
+          </Hover3D>
         </div>
-        <TeamMember name="Dilan Asatekin" role="Founder" position="Data Engeineer/Scientist" />
+        <Hover3D>
+          <TeamMember name="Dilan Asatekin" role="Founder" position="Data Engineer/Scientist" />
+        </Hover3D>
       </div>
     </div>
   </section>

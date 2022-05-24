@@ -18,7 +18,6 @@ const Lode = () => {
       document.documentElement.scrollHeight -
       document.documentElement.clientHeight
     const scrolled = winScroll / height
-    console.log(scrolled)
     setTop(scrolled)
   }
 
