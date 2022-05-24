@@ -3,6 +3,7 @@ import CornerBorderDiv from "../CornerBorderDiv"
 import Button from "../../components/Button"
 import DropDown from "../Dropdown"
 import FadeInSection from "../FadeInSection"
+import NumberInput from "../NumberInput"
 
 const CalculatorSection = () => (
   <section className="md:mt-[330px] md:px-[10px]">
@@ -48,7 +49,9 @@ const CalculatorSection = () => (
             <p>Yearly return</p>
           </div>
           <div className="flex justify-between font-spaceGrotesk md:text-[45px] font-bold text-[32px]">
-            <span className="border-b-[1px] border-b-imperGrey">600,000</span>
+            <span className="border-b-[1px] border-b-imperGrey w-1/2">
+              <NumberInput />
+            </span>
             <span className="text-success">+17.65%</span>
           </div>
           <div className="relative my-4 block md:hidden ">

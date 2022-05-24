@@ -6,6 +6,7 @@ import Accordion from "../../components/Accordion"
 import Card from "../../components/Card"
 import DropDown from "../../components/Dropdown"
 import FadeInSection from "../../components/FadeInSection"
+import NumberInput from "../../components/NumberInput"
 
 const Article = () => (
   <div className="bg-[#65474D]/50 p-5 md:max-w-[300px] flex flex-col rounded-2xl md:mt-14 mt-6">
@@ -49,12 +50,11 @@ const Home = () => {
             </div>
             <p>How many <span className="text-info">{`{ASSET}`}</span> do you have?</p>
             <div className="font-spaceGrotesk md:text-[45px] font-bold text-[32px]">
-              <span className="border-b-imperGrey">600,000</span>
+              <NumberInput className="w-1/2 mx-auto" />
             </div>
             <div className="relative my-4 mt-8">
               <div className="bg-[#3f5d4a] rounded-full overflow-hidden">
-                <div className="bg-success w-1/2 h-4" role="progressbar" aria-label="music progress">
-                </div>
+                <div className="bg-success w-1/2 h-4" role="progressbar" aria-label="music progress" />
               </div>
               <div className="bg-white absolute left-1/2 top-1/2 w-4 h-4 -mt-2 -ml-2 flex items-center justify-center rounded-full shadow border-0">
               </div>

@@ -69,3 +69,7 @@ code {
   background: url('/public/bg/home.png') no-repeat top center;
   background-size: cover;
 }
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
