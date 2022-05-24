@@ -6,10 +6,10 @@ const FAQSection = () => {
   return <section className="md:mt-[380px] md:px-[210px] mt-[90px]">
     <FadeInSection>
       <h3 className="medium-title text-center">Got questions ?</h3>
+      <h4 className="font-bold text-md text-primary-500 font-inter mb-16 text-center">
+        We have the answers
+      </h4>
     </FadeInSection>
-    <h4 className="font-bold text-md text-primary-500 font-inter mb-16 text-center">
-      We have the answers
-    </h4>
     <FadeInSection>
       <div className="mb-4">
         <Accordion

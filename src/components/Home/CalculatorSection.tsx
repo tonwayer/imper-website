@@ -4,6 +4,7 @@ import Button from "../../components/Button"
 import DropDown from "../Dropdown"
 import FadeInSection from "../FadeInSection"
 import NumberInput from "../NumberInput"
+import Progress from "../Progress"
 
 const CalculatorSection = () => (
   <section className="md:mt-[330px] md:px-[10px]">
@@ -36,14 +37,7 @@ const CalculatorSection = () => (
             Simulate your earn
           </h4>
           <DropDown />
-          <div className="relative my-4 hidden md:block ">
-            <div className="bg-[#3f5d4a] rounded-full overflow-hidden">
-              <div className="bg-success w-1/2 h-4" role="progressbar" aria-label="music progress">
-              </div>
-            </div>
-            <div className="bg-white absolute left-1/2 top-1/2 w-4 h-4 -mt-2 -ml-2 flex items-center justify-center rounded-full shadow border-0">
-            </div>
-          </div>
+          <Progress progress={45} />
           <div className="flex justify-between md:mt-0 mt-8">
             <p className="text-left">How many <span className="text-info">{`{ASSET}`}</span> do you have?</p>
             <p>Yearly return</p>
