@@ -14,7 +14,6 @@ const Hover3D = (props: Props) => {
   const [brightness, setBrightness] = useState(1)
 
   const handleHover = (e: any) => {
-    console.log("log")
     const { clientX, clientY, currentTarget } = e
     const { width, height, left, top} = currentTarget.getBoundingClientRect()
 
