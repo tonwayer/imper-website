@@ -4,7 +4,7 @@ import FadeInSection from "../FadeInSection"
 const ValueSection = () => {
 
   return <section className="md:mt-[230px] 2xl:mx-[100px]">
-    <div className="md:px-[150px]">
+    <div className="lg:px-[150px]">
       <div className="md:flex-row justify-between flex-col flex">
         <FadeInSection>
           <div className=" text-left md:mb-0 mb-6 order-2 md:order-1 bg-[#65474D]/50 rounded-2xl p-7 md:max-w-[280px] md:mt-[145px] md:ml-16">

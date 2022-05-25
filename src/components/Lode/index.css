@@ -1,0 +1,10 @@
+.lode-container {
+  animation-name: lodeframes;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes lodeframes {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}

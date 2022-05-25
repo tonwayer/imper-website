@@ -2,6 +2,8 @@ import { Suspense, useEffect, useState } from 'react';
 import { useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber"
 
+import "./index.css"
+
 const Lode = () => {
   const [top, setTop] = useState(0)
   const [lode, setLode] = useState(1)
@@ -36,7 +38,7 @@ const Lode = () => {
   return (
     <>
       <div
-        className="h-[1000px] w-[100vw] absolute"
+        className="h-[1000px] w-[100vw] absolute lode-container"
         style={{ backgroundColor: "rgba(0,0,0,0)" }}
       >{
           lode === 1 ?
