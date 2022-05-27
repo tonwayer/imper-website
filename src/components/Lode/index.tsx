@@ -38,20 +38,30 @@ const Lode = () => {
   return (
     <>
       <div
-        className="h-[1000px] w-[100vw] absolute lode-container"
-        style={{ backgroundColor: "rgba(0,0,0,0)" }}
-      >{
+        className="h-[140vh] w-[100vw] lode-container"
+        style={{
+          backgroundColor: "rgba(0,0,0,0)",
+          opacity: 1 - top * 10
+        }}
+      >
+        {
           lode === 1 ?
-            <Canvas camera={{ near: 0.1, far: 2000, position: [0, 10, 400] }} orthographic={true}>
+            <Canvas camera={{ near: -1000, far: 1000000, position: [0, 0, 400] }} orthographic={true}>
               <pointLight position={[0, 300, 3000]} intensity={1.3} />
               <Suspense fallback={null}>
-                <primitive key={1} object={scene} position={[260, 220, 0]} scale={0.18} rotation={[0, Math.PI * top * 30 + (Math.PI / 2 * 3), 0]} />
+                <primitive key={1} object={scene} position={[460, 200, 0]}
+                  scale={0.18 + (top * 25)}
+                  rotation={[0, (Math.PI * top + Math.PI / 2 * 3.2), 0]}
+                />
               </Suspense>
             </Canvas>
-            : <Canvas camera={{ near: 0.1, far: 2000, position: [0, 10, 400] }} orthographic={true}>
+            : <Canvas camera={{ near: -1000, far: 1000000, position: [0, 0, 400] }} orthographic={true}>
               <pointLight position={[0, 300, 3000]} intensity={1.3} />
               <Suspense fallback={null}>
-                <primitive key={2} object={scene} position={[0, 360, 0]} scale={0.07} rotation={[0, Math.PI * top * 30 + (Math.PI / 2 * 3), 0]} />
+                <primitive key={2} object={scene} position={[0, 360, 0]}
+                  scale={0.07 + (top * 25)}
+                  rotation={[0, (Math.PI * top * 3 + Math.PI / 2 * 3), 0]}
+                />
               </Suspense>
             </Canvas>
         }

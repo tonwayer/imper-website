@@ -8,7 +8,7 @@ const HeroSection = () => {
   return <section className="md:mt-[115px] md:px-[20px] mt-0">
     <Lode />
     <div className="max-w-[587px] md:mb-xx-sm mb-[80px]">
-      <CornerBorderDiv className="block md:hidden pt-[290px]">
+      <CornerBorderDiv className="block md:hidden pt-[380px]">
         <div className="md:-mr-16">
           <h2 className="font-bold md:text-d-lg leading-[64px] mb-2 text-center md:text-left text-[45px]">
             <FadeInSection>
