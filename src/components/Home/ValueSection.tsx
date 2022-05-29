@@ -6,14 +6,16 @@ const ValueSection = () => {
   return <section className="md:mt-[230px] 2xl:mx-[100px]">
     <div className="xl:px-[150px]">
       <div className="md:flex-row justify-between flex-col flex">
-        <FadeInSection>
-          <div className=" text-left md:mb-0 mb-6 order-2 md:order-1 bg-[#65474D]/50 rounded-2xl p-7 md:max-w-[280px] md:mt-[145px] md:ml-16">
-            <h3 className="text-[32px] font-spaceGrotesk">Dream Big.</h3>
-            <p className="mt-4 label-large">
-              We think big, take smart risks, and do things that have never been done before. We are not afraid to make tough choices that align with our long-term objectives. We know that it always seems impossible until it’s done
-            </p>
-          </div>
-        </FadeInSection>
+        <div className="order-2 md:order-1">
+          <FadeInSection>
+            <div className="text-left md:mb-0 mb-6 bg-[#65474D]/50 rounded-2xl p-7 md:max-w-[280px] md:mt-[145px] md:ml-16">
+              <h3 className="text-[32px] font-spaceGrotesk">Dream Big.</h3>
+              <p className="mt-4 label-large">
+                We think big, take smart risks, and do things that have never been done before. We are not afraid to make tough choices that align with our long-term objectives. We know that it always seems impossible until it’s done
+              </p>
+            </div>
+          </FadeInSection>
+        </div>
         <div className="order-1 md:order-2">
           <CornerBorderDiv className="right-top-corner left-bottom-corner p-8 max-w-[360px]">
             <div>

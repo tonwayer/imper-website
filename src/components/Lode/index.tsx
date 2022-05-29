@@ -46,21 +46,21 @@ const Lode = () => {
       >
         {
           lode === 1 ?
-            <Canvas camera={{ near: -1000, far: 1000000, position: [0, 0, 400] }} orthographic={true}>
+            <Canvas camera={{ near: -1000, far: 1000000, position: [0, 0, 0] }} orthographic={true}>
               <pointLight position={[0, 300, 3000]} intensity={1.3} />
               <Suspense fallback={null}>
                 <primitive key={1} object={scene} position={[460, 200, 0]}
-                  scale={0.18 + (top * 25)}
-                  rotation={[0, (Math.PI * top + Math.PI / 2 * 3.2), 0]}
+                  scale={0.18 + (top * 30)}
+                  rotation={[0, (Math.PI * top * 4 + Math.PI / 2 * 2.8), 0]}
                 />
               </Suspense>
             </Canvas>
             : <Canvas camera={{ near: -1000, far: 1000000, position: [0, 0, 400] }} orthographic={true}>
               <pointLight position={[0, 300, 3000]} intensity={1.3} />
               <Suspense fallback={null}>
-                <primitive key={2} object={scene} position={[0, 360, 0]}
+                <primitive key={2} object={scene} position={[0, 330, 0]}
                   scale={0.07 + (top * 25)}
-                  rotation={[0, (Math.PI * top * 3 + Math.PI / 2 * 3), 0]}
+                  rotation={[0, (Math.PI * top * 4 + Math.PI / 2 * 2.8), 0]}
                 />
               </Suspense>
             </Canvas>

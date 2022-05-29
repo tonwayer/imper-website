@@ -21,10 +21,10 @@ const StakeSection = () => {
 
   return <section>
     <div className='md:block hidden'>
-      <div ref={domRef} className={`absolute mt-36 -left-[470px] ${isVisible ? 'translate-x-[220px]' : ''}`} style={{ transition: 'transform 1s ease-in-out 0.5s' }}>
+      <div ref={domRef} className={`absolute mt-36 -left-[470px] ${isVisible ? 'translate-x-[120px]' : ''}`} style={{ transition: 'transform 1s ease-in-out 0.5s' }}>
         <img src="/assets/pilonne1.png" alt="plonne1" />
       </div>
-      <div ref={domRef} className={`absolute mt-36 -right-[440px] ${isVisible ? '-translate-x-[220px]' : ''}`} style={{ transition: 'transform 1s ease-in-out 0.5s' }}>
+      <div ref={domRef} className={`absolute mt-36 -right-[440px] ${isVisible ? '-translate-x-[120px]' : ''}`} style={{ transition: 'transform 1s ease-in-out 0.5s' }}>
         <img src="/assets/pilonne2.png" alt="plonne2" />
       </div>
     </div>
