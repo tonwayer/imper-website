@@ -1,14 +1,56 @@
 import { Icon } from "@iconify/react"
+import { useEffect, useMemo, useState } from "react"
 import Button from "../../components/Button"
 import CornerBorderDiv from "../CornerBorderDiv"
 import FadeInSection from "../FadeInSection"
 import Lode from "../Lode"
+const t = 0.01
 
 const HeroSection = () => {
-  return <section className="md:mt-[115px] md:px-[20px] mt-0">
+
+  const [scrollRate, setScrollRate] = useState(0)
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, true)
+    return () => {
+      window.removeEventListener('scroll', handleScroll, true)
+    }
+  }, [])
+
+  const handleScroll = () => {
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight
+    const scrollRate = winScroll / height
+    setScrollRate(scrollRate)
+  }
+
+  const topMargin = useMemo(() => {
+    if (scrollRate < t) {
+      return 115
+    } else {
+      return 115 - 5000 * (scrollRate - t)
+    }
+  }, [scrollRate])
+
+  const marginX = useMemo(() => {
+    return 8000 * scrollRate
+  }, [scrollRate])
+
+  return <section
+    className={`md:px-[180px] left-0 right-0 mt-0 md:fixed md:top-[115px] relative`}
+    style={{
+      marginTop: topMargin,
+      opacity: 1 - scrollRate * 10,
+    }}
+  >
     <Lode />
-    <div className="max-w-[587px] md:mb-xx-sm mb-[80px]">
-      <CornerBorderDiv className="block md:hidden pt-[380px]">
+    <div className="max-w-[587px] md:mb-xx-sm mb-[80px] relative">
+      <CornerBorderDiv
+        className="block md:hidden pt-[380px]"
+      >
         <div className="md:-mr-16">
           <h2 className="font-bold md:text-d-lg leading-[64px] mb-2 text-center md:text-left text-[45px]">
             <FadeInSection>
@@ -27,7 +69,10 @@ const HeroSection = () => {
           </Button>
         </div>
       </CornerBorderDiv>
-      <CornerBorderDiv className="hidden md:block right-top-corner left-bottom-corner md:pl-16 md:pb-16 md:pt-8">
+      <CornerBorderDiv
+        className="hidden md:block right-top-corner left-bottom-corner md:pl-16 md:pb-16 md:pt-8"
+        style={{ left: -marginX }}
+      >
         <div className="md:-mr-16">
           <h2 className="font-bold md:text-d-lg leading-[64px] mb-2 text-center md:text-left text-[45px]">
             <FadeInSection>
@@ -47,8 +92,10 @@ const HeroSection = () => {
         </div>
       </CornerBorderDiv>
     </div>
-    <div className="md:grid md:grid-cols-4 md:ml-[110px] md:-mt-5">
-      <div className="col-end-4">
+    <div className="md:grid md:grid-cols-5 md:ml-[110px] md:-mt-5 fixed w-full"
+      style={{ right: -marginX }}
+    >
+      <div className="col-end-5">
         <FadeInSection>
           <div className="md:mb-md mb-[70px]">
             <span>More than</span>
@@ -72,7 +119,7 @@ const HeroSection = () => {
           </div>
         </FadeInSection>
       </div>
-      <div className="col-end-5 md:mt-1">
+      <div className="col-end-6 md:mt-1">
         <FadeInSection>
           <div className="md:mb-md mb-[70px]">
             <span>We operate on</span>

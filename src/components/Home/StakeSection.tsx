@@ -19,7 +19,7 @@ const StakeSection = () => {
     }
   }, [domRef])
 
-  return <section>
+  return <section className='md:mt-[100vh]'>
     <div className='md:block hidden'>
       <div ref={domRef} className={`absolute mt-36 -left-[470px] ${isVisible ? 'translate-x-[120px]' : ''}`} style={{ transition: 'transform 1s ease-in-out 0.5s' }}>
         <img src="/assets/pilonne1.png" alt="plonne1" />

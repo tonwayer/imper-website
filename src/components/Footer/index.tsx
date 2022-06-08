@@ -14,7 +14,7 @@ const FooterCol = (props: { title: string, items: Array<{ title: string, address
 </div>
 
 const Footer = () => {
-  return <footer className="relative text-white lg:text-left text-center pt-[100px] xl:px-[170px] z-40">
+  return <footer className="relative bottom-0 text-white lg:text-left text-center pt-[100px] xl:px-[170px] z-40">
     <div className="lg:flex lg:justify-between">
       <div className="lg:block flex lg:justify-start justify-center mb-[54px]">
         <Link to="/#" className="flex items-center">

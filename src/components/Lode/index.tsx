@@ -7,15 +7,20 @@ import "./index.css"
 const Lode = () => {
   const [top, setTop] = useState(0)
   const [lode, setLode] = useState(1)
+  const [rotation, setRotation] = useState(0)
 
-  const { scene } = useGLTF("PLANET_LODE_IMPERATOR_NEW_V.glb")
+  const { scene } = useGLTF("door_only.glb")
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, true)
     window.addEventListener('resize', handleResize, true)
     setLode(window.window.innerWidth > 768 ? 1 : 2)
+    // const handler = setInterval(() => {
+    //   setRotation(rotation => rotation + 0.01)
+    // }, 50)
 
     return () => {
+      // clearInterval(handler)
       window.removeEventListener('scroll', handleScroll, true)
       window.removeEventListener('resize', handleResize, true)
     }
@@ -41,7 +46,7 @@ const Lode = () => {
         className="h-[140vh] w-[100vw] lode-container"
         style={{
           backgroundColor: "rgba(0,0,0,0)",
-          opacity: 1 - top * 10
+          opacity: 1 - top * 12
         }}
       >
         {

@@ -4,7 +4,8 @@ import "./index.css"
 
 type Props = {
   children: React.ReactNode,
-  className?: string
+  className?: string,
+  style?: any,
 }
 
 const CornerBorderDiv = (props: Props) => {
@@ -23,6 +24,7 @@ const CornerBorderDiv = (props: Props) => {
 
   return <div className={`corner-border ${isVisible ? 'is-visible' : ''} ` + props.className}
     ref={domRef}
+    style={props.style}
   >
     {props.children}
   </div>
