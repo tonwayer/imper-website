@@ -10,7 +10,7 @@ axiosInstance.interceptors.response.use(
     if (error.response) {
       return Promise.reject(error);
     }
-  },
+  }
 );
 
 const api = {

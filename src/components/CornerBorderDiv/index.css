@@ -1,15 +1,20 @@
 .corner-border {
-  position:relative;
+  position: relative;
 }
 
-.corner-border:before, .corner-border:after, .corner-border>:first-child:before, .corner-border>:first-child:after {
-  position:absolute;
-  width:34px; height: 34px;
+.corner-border:before,
+.corner-border:after,
+.corner-border > :first-child:before,
+.corner-border > :first-child:after {
+  position: absolute;
+  width: 34px;
+  height: 34px;
   border-color: white;
   border-style: solid;
   content: ' ';
-  transition: right 0.9s linear, border-left-color 0.9s cubic-bezier(1, -0.38, 1, -0.44),
-    left 0.9s linear, border-right-color 0.9s cubic-bezier(1, -0.38, 1, -0.44);
+  transition: right 0.9s linear,
+    border-left-color 0.9s cubic-bezier(1, -0.38, 1, -0.44), left 0.9s linear,
+    border-right-color 0.9s cubic-bezier(1, -0.38, 1, -0.44);
 }
 
 .left-top-corner.corner-border:before {
@@ -26,43 +31,45 @@
   border-right-color: rgba(255, 255, 255, 0);
 }
 
-.right-bottom-corner.corner-border>:first-child:before {
+.right-bottom-corner.corner-border > :first-child:before {
   bottom: 0;
   left: 0;
   border-width: 0 1px 1px 0;
   border-right-color: rgba(255, 255, 255, 0);
 }
 
-.left-bottom-corner.corner-border>:first-child:after {
+.left-bottom-corner.corner-border > :first-child:after {
   bottom: 0;
   right: 0;
   border-width: 0 0 1px 1px;
   border-left-color: rgba(255, 255, 255, 0);
 }
 
-.is-visible.left-top-corner.corner-border:before{
+.is-visible.left-top-corner.corner-border:before {
   right: 100%;
   border-left-color: rgba(255, 255, 255, 1);
 }
 
-.is-visible.right-top-corner.corner-border:after{
+.is-visible.right-top-corner.corner-border:after {
   left: 100%;
   border-right-color: rgba(255, 255, 255, 1);
 }
 
-.is-visible.right-bottom-corner.corner-border>:first-child:before {
+.is-visible.right-bottom-corner.corner-border > :first-child:before {
   left: 100%;
   border-right-color: rgba(255, 255, 255, 1);
 }
 
-.is-visible.left-bottom-corner.corner-border>:first-child:after {
+.is-visible.left-bottom-corner.corner-border > :first-child:after {
   right: 100%;
   border-left-color: rgba(255, 255, 255, 1);
 }
-
 
 @media (max-width: 768px) {
-  .corner-border:before, .corner-border:after, .corner-border>:first-child:before, .corner-border>:first-child:after {
+  .corner-border:before,
+  .corner-border:after,
+  .corner-border > :first-child:before,
+  .corner-border > :first-child:after {
     width: 0px;
     height: 0px;
   }

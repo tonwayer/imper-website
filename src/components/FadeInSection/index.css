@@ -2,7 +2,7 @@
   opacity: 0;
   transform: translateY(50%);
   visibility: hidden;
-  transition: opacity 0.3s ease-in-out, transform .6s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.6s ease-in-out;
   will-change: opacity, visibility;
 }
 

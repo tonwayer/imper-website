@@ -1,5 +1,5 @@
-.peer::after  {
-  background-color: #BE2A2E;
+.peer::after {
+  background-color: #be2a2e;
   border: none;
   border-radius: 8px;
   height: calc(100% - 4px);

@@ -1,24 +1,23 @@
-import React from 'react'
+import React from 'react';
 
-import './index.css'
+import './index.css';
 
 type Props = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
 const FadeInSection = (props: Props) => {
-  const [isVisible, setVisible] = React.useState(false)
-  const domRef = React.useRef<HTMLDivElement | null>(null)
+  const [isVisible, setVisible] = React.useState(false);
+  const domRef = React.useRef<HTMLDivElement | null>(null);
 
   React.useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setVisible(entry.isIntersecting))
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => setVisible(entry.isIntersecting));
     });
     if (domRef?.current) {
-
-      observer.observe(domRef.current)
+      observer.observe(domRef.current);
     }
-  }, [domRef])
+  }, [domRef]);
 
   return (
     <div
@@ -27,8 +26,7 @@ const FadeInSection = (props: Props) => {
     >
       {props.children}
     </div>
-  )
-}
+  );
+};
 
-
-export default FadeInSection
+export default FadeInSection;
