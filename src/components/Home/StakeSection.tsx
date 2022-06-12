@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import CornerBorderDiv from "../CornerBorderDiv"
 import CryptoIconBox from "../CryptoIconBox"
@@ -9,7 +9,7 @@ const StakeSection = () => {
   const [isVisible, setVisible] = React.useState(false)
   const domRef = React.useRef<HTMLDivElement | null>(null)
 
-  React.useEffect(() => {
+  useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => setVisible(entry.isIntersecting))
     });
@@ -18,8 +18,7 @@ const StakeSection = () => {
       observer.observe(domRef.current)
     }
   }, [domRef])
-
-  return <section className='md:mt-[100vh]'>
+  return <section className='md:mt-[100vh]' id="stake-section">
     <div className='md:block hidden'>
       <div ref={domRef} className={`absolute mt-36 -left-[470px] ${isVisible ? 'translate-x-[120px]' : ''}`} style={{ transition: 'transform 1s ease-in-out 0.5s' }}>
         <img src="/assets/pilonne1.png" alt="plonne1" />

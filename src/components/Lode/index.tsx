@@ -10,17 +10,19 @@ const Lode = () => {
   const [rotation, setRotation] = useState(0)
 
   const { scene } = useGLTF("door_only.glb")
+  const { scene: scene3 } = useGLTF("rocks.glb")
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, true)
     window.addEventListener('resize', handleResize, true)
     setLode(window.window.innerWidth > 768 ? 1 : 2)
-    // const handler = setInterval(() => {
-    //   setRotation(rotation => rotation + 0.01)
-    // }, 50)
+
+    const handler = setInterval(() => {
+      setRotation(rotation => rotation + 0.01)
+    }, 50)
 
     return () => {
-      // clearInterval(handler)
+      clearInterval(handler)
       window.removeEventListener('scroll', handleScroll, true)
       window.removeEventListener('resize', handleResize, true)
     }
@@ -46,7 +48,7 @@ const Lode = () => {
         className="h-[140vh] w-[100vw] lode-container"
         style={{
           backgroundColor: "rgba(0,0,0,0)",
-          opacity: 1 - top * 12
+          opacity: 1 - top * 20
         }}
       >
         {
@@ -54,18 +56,38 @@ const Lode = () => {
             <Canvas camera={{ near: -1000, far: 1000000, position: [0, 0, 0] }} orthographic={true}>
               <pointLight position={[0, 300, 3000]} intensity={1.3} />
               <Suspense fallback={null}>
-                <primitive key={1} object={scene} position={[460, 200, 0]}
-                  scale={0.18 + (top * 30)}
+                <primitive
+                  key={1}
+                  object={scene}
+                  position={[460, 200, 0]}
+                  scale={0.2 + (top * 30)}
                   rotation={[0, (Math.PI * top * 4 + Math.PI / 2 * 2.8), 0]}
+                />
+                <primitive
+                  key={2}
+                  object={scene3}
+                  position={[460, 160, -20]}
+                  scale={1200 + (top * 240000)}
+                  rotation={[0, rotation, 0]}
                 />
               </Suspense>
             </Canvas>
             : <Canvas camera={{ near: -1000, far: 1000000, position: [0, 0, 400] }} orthographic={true}>
               <pointLight position={[0, 300, 3000]} intensity={1.3} />
               <Suspense fallback={null}>
-                <primitive key={2} object={scene} position={[0, 330, 0]}
+                <primitive
+                  key={3}
+                  object={scene}
+                  position={[0, 330, 0]}
                   scale={0.07 + (top * 25)}
                   rotation={[0, (Math.PI * top * 4 + Math.PI / 2 * 2.8), 0]}
+                />
+                <primitive
+                  key={4}
+                  object={scene3}
+                  position={[0, 315, -20]}
+                  scale={470 + (top * 150000)}
+                  rotation={[0, rotation, 0]}
                 />
               </Suspense>
             </Canvas>
