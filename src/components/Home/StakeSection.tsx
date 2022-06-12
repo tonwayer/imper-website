@@ -13,8 +13,8 @@ const StakeSection = () => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => setVisible(entry.isIntersecting))
     });
-    if (domRef?.current) {
 
+    if (domRef?.current) {
       observer.observe(domRef.current)
     }
   }, [domRef])

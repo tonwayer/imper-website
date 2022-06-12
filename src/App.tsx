@@ -5,9 +5,11 @@ import './styles/app.css';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Calculator from './pages/Calculator';
+import { AxiosInstanceProvider } from './services/AxiosContext';
 
 function App() {
-  return <BrowserRouter>
+  return <AxiosInstanceProvider>
+    <BrowserRouter>
       <Layout>
         <Routes>
           <Route path="/home" element={<Home />} />
@@ -17,6 +19,7 @@ function App() {
         </Routes>
       </Layout>
     </BrowserRouter>;
+  </AxiosInstanceProvider>
 }
 
 export default App;

@@ -1,17 +1,18 @@
 import { Icon } from "@iconify/react"
 import { useEffect, useMemo, useState } from "react"
-import Button from "../../components/Button"
 import CornerBorderDiv from "../CornerBorderDiv"
 import FadeInSection from "../FadeInSection"
 import LinkButton from "../LinkButton"
 import Lode from "../Lode"
+import { useAxios } from '../../services/useAxios'
+import { nFormatter } from "../../services/utils"
 
 const t = 0.01
 const topT = 0.1
 
 const HeroSection = () => {
-
   const [scrollRate, setScrollRate] = useState(0)
+  const { data, loaded, error } = useAxios('/overview', 'get')
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, true)
@@ -109,7 +110,7 @@ const HeroSection = () => {
           <div className="md:mb-md mb-[70px]">
             <span>More than</span>
             <h2 className="font-bold text-d-lg leading-[64px]">
-              5000
+              {nFormatter(data?.delegator_number, 0) ?? 5000}
             </h2>
             <span>
               Customers worldwide
@@ -120,7 +121,7 @@ const HeroSection = () => {
           <div className="md:mb-md mb-[70px]">
             <span>More than</span>
             <h2 className="font-bold text-d-lg leading-[64px]">
-              15M
+              {nFormatter(data?.total_asset_staked, 0) ?? '15M'}
             </h2>
             <span>
               Delegated to us
@@ -133,7 +134,7 @@ const HeroSection = () => {
           <div className="md:mb-md mb-[70px]">
             <span>We operate on</span>
             <h2 className="font-bold text-d-lg leading-[64px]">
-              147
+              {data?.total_operated_project ?? 147}
             </h2>
             <span>
               Projects
@@ -159,7 +160,7 @@ const HeroSection = () => {
           <div className="md:mb-md mb-[70px]">
             <span>More than</span>
             <h2 className="font-bold text-d-lg leading-[64px]">
-              5000
+              {nFormatter(data?.delegator_number, 0) ?? 5000}
             </h2>
             <span>
               Customers worldwide
@@ -170,7 +171,7 @@ const HeroSection = () => {
           <div className="md:mb-md mb-[70px]">
             <span>More than</span>
             <h2 className="font-bold text-d-lg leading-[64px]">
-              15M
+              {nFormatter(data?.total_asset_staked, 0) ?? '15M'}
             </h2>
             <span>
               Delegated to us
@@ -183,7 +184,7 @@ const HeroSection = () => {
           <div className="md:mb-md mb-[70px]">
             <span>We operate on</span>
             <h2 className="font-bold text-d-lg leading-[64px]">
-              147
+              {data?.total_operated_project ?? 147}
             </h2>
             <span>
               Projects
