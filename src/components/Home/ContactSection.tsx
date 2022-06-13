@@ -15,7 +15,7 @@ const ContactSection = () => {
       message: '',
     },
     onSubmit: (values) => {
-      api.postContact(values.name, values.email, values.message)
+      api.postContact(values.name, values.email, values.message);
     },
   });
 
@@ -62,7 +62,12 @@ const ContactSection = () => {
               className="bg-[#65474D] w-full text-sm block p-2.5 rounded-lg text-white border border-white focus:ring-white"
             />
           </div>
-          <Button className="w-full mt-6" handleClick={() =>formik.submitForm()}>Send message</Button>
+          <Button
+            className="w-full mt-6"
+            handleClick={() => formik.submitForm()}
+          >
+            Send message
+          </Button>
           <div className="mt-8">
             <div className="md:flex justify-between">
               <div className="flex items-center">

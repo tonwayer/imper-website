@@ -3,7 +3,13 @@ import React, { useMemo, useState, useEffect } from 'react';
 
 import './index.css';
 
-export type ItemProps = { name: string; fee: number | null; image: number; project_apr: number; token_price: number };
+export type ItemProps = {
+  name: string;
+  fee: number | null;
+  image: number;
+  project_apr: number;
+  token_price: number;
+};
 
 type DropDownProps = {
   items: Array<ItemProps>;
@@ -38,12 +44,10 @@ const DropDown = (props: DropDownProps) => {
   }, [props.items, filter]);
 
   useEffect(() => {
-    if (props.items.length)
-    {
-      setSelectedItem(props.items[0])
+    if (props.items.length) {
+      setSelectedItem(props.items[0]);
     }
-  }, [props.items])
-  
+  }, [props.items]);
 
   return (
     <div className="relative">

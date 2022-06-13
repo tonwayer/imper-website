@@ -32,8 +32,8 @@ const TeamSection = () => {
         className="block md:hidden"
         showThumbs={false}
       >
-        {
-          data && data.map((member: any, index: number) => (
+        {data &&
+          data.map((member: any, index: number) => (
             <TeamMember
               key={index}
               linkedin={member.linkedin}
@@ -43,13 +43,12 @@ const TeamSection = () => {
               role={member.role}
               position={member.profession}
             />
-          ))
-        }
+          ))}
       </Carousel>
       <div className="hidden md:block">
         <div className="flex justify-center">
-          {
-            data && data.map((member: any, index: number) => (
+          {data &&
+            data.map((member: any, index: number) => (
               <div className="mr-10" key={index}>
                 <Hover3D>
                   <TeamMember
@@ -62,8 +61,7 @@ const TeamSection = () => {
                   />
                 </Hover3D>
               </div>
-            ))
-          }
+            ))}
         </div>
       </div>
     </section>

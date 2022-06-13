@@ -7,7 +7,7 @@ type Props = {
   className?: string;
   github: string;
   linkedin: string;
-  photo: string
+  photo: string;
 };
 
 const TeamMember = (props: Props) => {

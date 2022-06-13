@@ -15,21 +15,19 @@ const Hover3D = (props: Props) => {
   );
   const [brightness, setBrightness] = useState(1);
 
-  const handleHover = useCallback(
-    (e: any) => {
-      const { clientX, clientY, currentTarget } = e;
-      const { width, height, left, top } = currentTarget.getBoundingClientRect();
+  const handleHover = useCallback((e: any) => {
+    const { clientX, clientY, currentTarget } = e;
+    const { width, height, left, top } = currentTarget.getBoundingClientRect();
 
-      const horizontal = (clientX - left) / width;
-      const vertical = (clientY - top) / height;
-      const rotateX = (THRESHOLD / 2 - horizontal * THRESHOLD).toFixed(2);
-      const rotateY = (vertical * THRESHOLD - THRESHOLD / 2).toFixed(2);
-      setTranStyle(
-        `perspective(${width}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`
-      );
-      setBrightness(1 + horizontal * vertical);
-    }, []
-  );
+    const horizontal = (clientX - left) / width;
+    const vertical = (clientY - top) / height;
+    const rotateX = (THRESHOLD / 2 - horizontal * THRESHOLD).toFixed(2);
+    const rotateY = (vertical * THRESHOLD - THRESHOLD / 2).toFixed(2);
+    setTranStyle(
+      `perspective(${width}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`
+    );
+    setBrightness(1 + horizontal * vertical);
+  }, []);
 
   const handleLeave = useCallback((e: any) => {
     setTranStyle(

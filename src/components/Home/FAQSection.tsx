@@ -3,7 +3,7 @@ import FadeInSection from '../FadeInSection';
 import { useAxios } from '../../services/useAxios';
 
 const FAQSection = () => {
-  const { data} = useAxios('/faq', 'get');
+  const { data } = useAxios('/faq', 'get');
 
   return (
     <section className="md:mt-[380px] lg:px-[210px] mt-[90px]">
@@ -13,16 +13,14 @@ const FAQSection = () => {
           We have the answers
         </h4>
       </FadeInSection>
-      {data && data.map((qa: any, index: number) => (
-        <FadeInSection key={index}>
-          <div className="mb-4">
-            <Accordion
-              title={qa.question}
-              content={qa.answer}
-            />
-          </div>
-        </FadeInSection>
-      ))}
+      {data &&
+        data.map((qa: any, index: number) => (
+          <FadeInSection key={index}>
+            <div className="mb-4">
+              <Accordion title={qa.question} content={qa.answer} />
+            </div>
+          </FadeInSection>
+        ))}
     </section>
   );
 };

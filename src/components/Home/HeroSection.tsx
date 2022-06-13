@@ -35,13 +35,13 @@ const HeroSection = () => {
     else return 8000 * scrollRate;
   }, [scrollRate]);
 
-  const handleSeeProjects = (() => {
-    const stakeSection = document.getElementById("stake-section");
+  const handleSeeProjects = () => {
+    const stakeSection = document.getElementById('stake-section');
     if (stakeSection) {
-      const { top } = stakeSection.getBoundingClientRect()
-      window.scrollTo(0, top - 10)
+      const { top } = stakeSection.getBoundingClientRect();
+      window.scrollTo(0, top - 10);
     }
-  })
+  };
 
   return (
     <section
@@ -62,7 +62,10 @@ const HeroSection = () => {
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore
             </p>
-            <Button className="px-[60px] py-4 w-full" handleClick={() => handleSeeProjects()}>
+            <Button
+              className="px-[60px] py-4 w-full"
+              handleClick={() => handleSeeProjects()}
+            >
               <div className="flex items-center justify-center">
                 See the projects
                 <Icon icon="bi:arrow-down" className="ml-md" />
@@ -87,7 +90,10 @@ const HeroSection = () => {
               erat, sed diam voluptua. At vero eos et accusam et justo duo
               dolores et ea rebum
             </p>
-            <Button className="px-[60px] py-4 w-full" handleClick={() => handleSeeProjects()}>
+            <Button
+              className="px-[60px] py-4 w-full"
+              handleClick={() => handleSeeProjects()}
+            >
               <div className="flex items-center justify-center">
                 See the projects
                 <Icon icon="bi:arrow-down" className="ml-md" />

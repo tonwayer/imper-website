@@ -10,7 +10,7 @@ const StakeSection = () => {
   const [isVisible, setVisible] = useState(false);
   const domRef = useRef<HTMLDivElement | null>(null);
   const { data, loaded } = useAxios('/projects/all', 'get');
-  const [live, setLive] = useState(1)
+  const [live, setLive] = useState(1);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -28,24 +28,26 @@ const StakeSection = () => {
   }, [data, loaded]);
 
   const handleClick = () => {
-    setLive(Math.abs(live - 1))
-  }
+    setLive(Math.abs(live - 1));
+  };
 
   return (
     <section className="md:mt-[140vh]" id="stake-section">
       <div className="md:block hidden">
         <div
           ref={domRef}
-          className={`absolute mt-36 -left-[470px] ${isVisible ? 'translate-x-[120px]' : ''
-            }`}
+          className={`absolute mt-36 -left-[470px] ${
+            isVisible ? 'translate-x-[120px]' : ''
+          }`}
           style={{ transition: 'transform 1s ease-in-out 0.5s' }}
         >
           <img src="/assets/pilonne1.png" alt="plonne1" />
         </div>
         <div
           ref={domRef}
-          className={`absolute mt-36 -right-[440px] ${isVisible ? '-translate-x-[120px]' : ''
-            }`}
+          className={`absolute mt-36 -right-[440px] ${
+            isVisible ? '-translate-x-[120px]' : ''
+          }`}
           style={{ transition: 'transform 1s ease-in-out 0.5s' }}
         >
           <img src="/assets/pilonne2.png" alt="plonne2" />
@@ -74,18 +76,19 @@ const StakeSection = () => {
         <Toggle width="w-full" onClick={handleClick} />
       </div>
       <div className="md:grid md:grid-cols-4 grid grid-cols-3 xl:px-[200px] mt-8">
-        {
-          projects.map((project: any, index: number) => (
-            project.project_state === live && <CryptoIconBox
-              state={project.project_state}
-              fee={project.project_commission_rate * 100}
-              label={project.project_name}
-              icon={project.project_image}
-              key={index}
-              apy={project.project_apr}
-            />
-          ))
-        }
+        {projects.map(
+          (project: any, index: number) =>
+            project.project_state === live && (
+              <CryptoIconBox
+                state={project.project_state}
+                fee={project.project_commission_rate * 100}
+                label={project.project_name}
+                icon={project.project_image}
+                key={index}
+                apy={project.project_apr}
+              />
+            )
+        )}
       </div>
     </section>
   );

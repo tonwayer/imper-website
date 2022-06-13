@@ -10,7 +10,7 @@ type Props = {
 const Layout = (props: Props) => {
   return (
     <div className="bg-[#2E2224] md:px-x-huge px-4 relative main overflow-hidden">
-        <Header />
+      <Header />
       <div className="max-w-[1440px] mx-auto relative">
         <div className="z-40 relative">{props.children}</div>
         <Footer />
