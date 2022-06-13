@@ -46,10 +46,10 @@ const TeamSection = () => {
           ))}
       </Carousel>
       <div className="hidden md:block">
-        <div className="flex justify-center">
+        <div className="flex justify-start flex-wrap">
           {data &&
             data.map((member: any, index: number) => (
-              <div className="mr-10" key={index}>
+              <div className="mr-10 mt-10" key={index}>
                 <Hover3D>
                   <TeamMember
                     linkedin={member.linkedin}
