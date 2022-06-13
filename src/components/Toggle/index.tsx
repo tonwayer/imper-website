@@ -2,6 +2,7 @@ import './index.css';
 
 type Props = {
   width?: string;
+  onClick: Function;
 };
 
 const Toggle = (props: Props) => (
@@ -15,6 +16,7 @@ const Toggle = (props: Props) => (
       value=""
       id="checked-toggle"
       className={`sr-only peer`}
+      onClick={() => props.onClick()}
     />
     <div
       className={`border border-white/20 flex relative text-center items-center rounded-[8px] h-[40px] bg-[#402323] peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all md:w-[175px] ${

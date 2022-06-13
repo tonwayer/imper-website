@@ -1,11 +1,15 @@
-import { Link } from 'react-router-dom';
 import CircleIcon from '../CircleIcon';
+
 type Props = {
   name: string;
   role: string;
   position: string;
   className?: string;
+  github: string;
+  linkedin: string;
+  photo: string
 };
+
 const TeamMember = (props: Props) => {
   return (
     <div
@@ -13,9 +17,9 @@ const TeamMember = (props: Props) => {
         props.className ? props.className : ''
       }`}
     >
-      <div>
+      <div className="min-w-[220px] min-h-[220px]">
         <img
-          src="/assets/default_avatar.svg"
+          src={`/assets/${props.photo ?? 'default_avatar.svg'}`}
           alt="avatar"
           className="mx-auto"
         />
@@ -25,20 +29,20 @@ const TeamMember = (props: Props) => {
       <p className="mt-8">{props.position}</p>
       <div className="w-full mt-10">
         <div className="flex justify-around mx-6">
-          <Link className="cursor-pointer" to="#">
+          <a className="cursor-pointer" href={props.linkedin}>
             <CircleIcon
               icon="akar-icons:linkedin-fill"
               classNames="w-x-big h-x-big bg-[#2E2224]"
               fontSize="12px"
             />
-          </Link>
-          <Link className="cursor-pointer" to="#">
+          </a>
+          <a className="cursor-pointer" href={props.github}>
             <CircleIcon
               icon="akar-icons:github-fill"
               classNames="w-x-big h-x-big bg-[#2E2224]"
               fontSize="12px"
             />
-          </Link>
+          </a>
         </div>
       </div>
     </div>

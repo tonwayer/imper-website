@@ -1,18 +1,18 @@
-import { useState } from 'react';
 import { Icon } from '@iconify/react';
 import CurrencyInput from 'react-currency-input-field';
 
 type Props = {
+  value: number;
+  handleChange: Function;
   className?: string;
 };
 
 const NumberInput = (props: Props) => {
-  const [value, setValue] = useState(600000);
   const handleStep = (type: string) => {
     if (type === 'up') {
-      setValue(value + 1000);
+      props.handleChange(props.value + 1000);
     } else {
-      setValue(value - 1000);
+      props.handleChange(props.value - 1000);
     }
   };
 
@@ -27,11 +27,11 @@ const NumberInput = (props: Props) => {
         </div>
       </div>
       <CurrencyInput
-        value={value}
+        value={props.value}
         className="w-full text-white md:text-[45px] font-bold text-[32px] bg-transparent border-0 focus:ring-0"
-        placeholder="Please enter a number"
+        placeholder=""
         decimalsLimit={2}
-        onValueChange={(value) => setValue(Number(value))}
+        onValueChange={(value) => props.handleChange(value)}
       />
     </div>
   );

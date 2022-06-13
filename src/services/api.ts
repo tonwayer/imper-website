@@ -22,7 +22,7 @@ const api = {
   getFaq: () => axiosInstance.get(`/faq`),
   getMedium: () => axiosInstance.get(`/medium`),
   postContact: (name: string, mail: string, text: string) =>
-    axiosInstance.post('/medium', {
+    axiosInstance.post('/contact', {
       name,
       mail,
       text,

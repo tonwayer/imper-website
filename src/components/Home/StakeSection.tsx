@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo, useState, useRef } from 'react';
+import { useAxios } from '../../services/useAxios';
 
 import CornerBorderDiv from '../CornerBorderDiv';
 import CryptoIconBox from '../CryptoIconBox';
@@ -6,8 +7,10 @@ import FadeInSection from '../FadeInSection';
 import Toggle from '../Toggle';
 
 const StakeSection = () => {
-  const [isVisible, setVisible] = React.useState(false);
-  const domRef = React.useRef<HTMLDivElement | null>(null);
+  const [isVisible, setVisible] = useState(false);
+  const domRef = useRef<HTMLDivElement | null>(null);
+  const { data, loaded } = useAxios('/projects/all', 'get');
+  const [live, setLive ] = useState(1)
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -18,23 +21,31 @@ const StakeSection = () => {
       observer.observe(domRef.current);
     }
   }, [domRef]);
+
+  const projects = useMemo(() => {
+    if (data && loaded) return data;
+    else return [];
+  }, [data, loaded]);
+
+  const handleClick = () => {
+    setLive(Math.abs(live - 1))
+  }
+
   return (
     <section className="md:mt-[100vh]" id="stake-section">
       <div className="md:block hidden">
         <div
           ref={domRef}
-          className={`absolute mt-36 -left-[470px] ${
-            isVisible ? 'translate-x-[120px]' : ''
-          }`}
+          className={`absolute mt-36 -left-[470px] ${isVisible ? 'translate-x-[120px]' : ''
+            }`}
           style={{ transition: 'transform 1s ease-in-out 0.5s' }}
         >
           <img src="/assets/pilonne1.png" alt="plonne1" />
         </div>
         <div
           ref={domRef}
-          className={`absolute mt-36 -right-[440px] ${
-            isVisible ? '-translate-x-[120px]' : ''
-          }`}
+          className={`absolute mt-36 -right-[440px] ${isVisible ? '-translate-x-[120px]' : ''
+            }`}
           style={{ transition: 'transform 1s ease-in-out 0.5s' }}
         >
           <img src="/assets/pilonne2.png" alt="plonne2" />
@@ -52,48 +63,31 @@ const StakeSection = () => {
               </h3>
             </FadeInSection>
             <p className="font-inter mb-x-big text-sm">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et ea rebum
+              {data?.description ??
+                `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                erat, sed diam voluptua. At vero eos et accusam et justo duo
+                dolores et ea rebum`}
             </p>
           </div>
         </CornerBorderDiv>
       </div>
       <div className="md:flex md:justify-center md:mt-7 md:mb-16">
-        <Toggle width="w-full" />
+        <Toggle width="w-full" onClick={handleClick} />
       </div>
-      <div className="hidden md:grid md:grid-cols-4 grid-cols-3 xl:px-[200px] mt-8">
-        <CryptoIconBox fee={0} label="Icon text label" icon={'crypto_icon_1'} />
-        <CryptoIconBox fee={0} label="Icon text label" icon={'crypto_icon_2'} />
-        <CryptoIconBox fee={0} label="Icon text label" icon={'crypto_icon_3'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_4'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_5'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_6'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_7'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_8'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_1'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_2'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_3'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_4'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_5'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_6'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_7'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_8'} />
-      </div>
-      <div className="grid md:hidden md:grid-cols-4 grid-cols-3 md:px-[200px] mt-8">
-        <CryptoIconBox fee={0} label="Icon text label" icon={'crypto_icon_1'} />
-        <CryptoIconBox fee={0} label="Icon text label" icon={'crypto_icon_2'} />
-        <CryptoIconBox fee={0} label="Icon text label" icon={'crypto_icon_3'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_4'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_5'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_6'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_7'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_8'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_1'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_2'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_3'} />
-        <CryptoIconBox label="Icon text label" icon={'crypto_icon_4'} />
+      <div className="md:grid md:grid-cols-4 grid grid-cols-3 xl:px-[200px] mt-8">
+        {
+          projects.map((project: any, index: number) => (
+            project.project_state === live && <CryptoIconBox
+              state={project.project_state}
+              fee={project.project_commission_rate * 100}
+              label={project.project_name}
+              icon={project.project_image}
+              key={index}
+              apy={project.project_apr}
+            />
+          ))
+        }
       </div>
     </section>
   );

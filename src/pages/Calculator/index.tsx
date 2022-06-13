@@ -63,15 +63,15 @@ const Home = () => {
             </div>
             <div className="max-w-[500px] text-center">
               <div className="mt-8 mb-8 md:hidden block">
-                <DropDown />
+                {/* <DropDown /> */}
               </div>
               <p>
                 How many <span className="text-info">{`{ASSET}`}</span> do you
                 have?
               </p>
-              <div className="font-spaceGrotesk md:text-[45px] font-bold text-[32px]">
+              {/* <div className="font-spaceGrotesk md:text-[45px] font-bold text-[32px]">
                 <NumberInput className="w-1/2 mx-auto" />
-              </div>
+              </div> */}
               <div className="relative my-4 mt-8">
                 <div className="bg-[#3f5d4a] rounded-full overflow-hidden">
                   <div

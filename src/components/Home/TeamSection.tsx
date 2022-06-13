@@ -1,11 +1,14 @@
 import TeamMember from '../TeamMember';
 import { Carousel } from 'react-responsive-carousel';
+import { useAxios } from '../../services/useAxios';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import FadeInSection from '../FadeInSection';
 import Hover3D from '../Hover3D';
 
 const TeamSection = () => {
+  const { data } = useAxios('/team', 'get');
+
   return (
     <section className="md:mt-[270px] mt-[80px]">
       <div className="text-center max-w-md mx-auto mb-20 md:mt-24">
@@ -29,82 +32,38 @@ const TeamSection = () => {
         className="block md:hidden"
         showThumbs={false}
       >
-        <TeamMember
-          name="Dilan Asatekin"
-          role="Founder"
-          position="Data Engineer/Scientist"
-          className="mx-auto"
-        />
-        <TeamMember
-          name="Dilan Asatekin"
-          role="Founder"
-          position="Data Engineer/Scientist"
-          className="mx-auto"
-        />
-        <TeamMember
-          name="Dilan Asatekin"
-          role="Founder"
-          position="Data Engineer/Scientist"
-          className="mx-auto"
-        />
-        <TeamMember
-          name="Dilan Asatekin"
-          role="Founder"
-          position="Data Engineer/Scientist"
-          className="mx-auto"
-        />
-        <TeamMember
-          name="Dilan Asatekin"
-          role="Founder"
-          position="Data Engineer/Scientist"
-          className="mx-auto"
-        />
+        {
+          data && data.map((member: any, index: number) => (
+            <TeamMember
+              key={index}
+              linkedin={member.linkedin}
+              github={member.github}
+              photo={member.photo}
+              name={member.fullname}
+              role={member.role}
+              position={member.profession}
+            />
+          ))
+        }
       </Carousel>
       <div className="hidden md:block">
         <div className="flex justify-center">
-          <div className="mr-10">
-            <Hover3D>
-              <TeamMember
-                name="Dilan Asatekin"
-                role="Founder"
-                position="Data Engineer/Scientist"
-              />
-            </Hover3D>
-          </div>
-          <div className="mr-10 relative">
-            <Hover3D>
-              <TeamMember
-                name="Dilan Asatekin"
-                role="Founder"
-                position="Data Engineer/Scientist"
-              />
-            </Hover3D>
-          </div>
-          <Hover3D>
-            <TeamMember
-              name="Dilan Asatekin"
-              role="Founder"
-              position="Data Engineer/Scientist"
-            />
-          </Hover3D>
-        </div>
-        <div className="flex justify-center mt-11">
-          <div className="mr-10">
-            <Hover3D>
-              <TeamMember
-                name="Dilan Asatekin"
-                role="Founder"
-                position="Data Engineer/Scientist"
-              />
-            </Hover3D>
-          </div>
-          <Hover3D>
-            <TeamMember
-              name="Dilan Asatekin"
-              role="Founder"
-              position="Data Engineer/Scientist"
-            />
-          </Hover3D>
+          {
+            data && data.map((member: any, index: number) => (
+              <div className="mr-10" key={index}>
+                <Hover3D>
+                  <TeamMember
+                    linkedin={member.linkedin}
+                    github={member.github}
+                    photo={member.photo}
+                    name={member.fullname}
+                    role={member.role}
+                    position={member.profession}
+                  />
+                </Hover3D>
+              </div>
+            ))
+          }
         </div>
       </div>
     </section>

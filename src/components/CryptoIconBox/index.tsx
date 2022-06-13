@@ -4,6 +4,8 @@ type Props = {
   icon: string;
   fee?: number;
   label: string;
+  apy?: string;
+  state: number;
 };
 
 const CryptoIconBox = (props: Props) => (
@@ -15,12 +17,12 @@ const CryptoIconBox = (props: Props) => (
     )}
     <div className="text-center flex flex-col items-center mt-3">
       <img
-        src={`/assets/${props.icon}.svg`}
+        src={`/logos/${props.icon}`}
         alt={props.icon}
         className="w-[60px] h-[60px] mb-[6px] icon-shadow"
       />
       <p className="text-[14px]">{props.label}</p>
-      <p className="text-success">%APY</p>
+      {props.state === 1 ?? <p className="text-success">%{props.apy}</p>}
     </div>
   </div>
 );

@@ -6,3 +6,24 @@
 .dropdown-list li:nth-of-type(even) {
   background-color: #332424;
 }
+
+.dropdown-list {
+  max-height: 312px;
+  overflow-y: scroll;
+}
+
+.dropdown-list::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 20px;
+}
+
+.dropdown-list::-webkit-scrollbar-track {
+  background: rgba(51, 36, 36, 0.4);
+  border-radius: 20px;
+}
+
+.dropdown-list::-webkit-scrollbar-thumb {
+  background-color: rgba(51, 36, 36, 0.8);
+  border-radius: 20px;
+  border: 2px solid rgba(51, 36, 36, 0.4);
+}
