@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react';
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 
 import './index.css';
 
@@ -12,7 +12,7 @@ type DropDownProps = {
 
 const DropDown = (props: DropDownProps) => {
   const [collapsed, setCollapsed] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(props.items[0] ?? null);
+  const [selectedItem, setSelectedItem] = useState<ItemProps | null>(null);
   const [filter, setFilter] = useState('');
 
   const handleSelectItem = (item: ItemProps) => {
@@ -36,6 +36,14 @@ const DropDown = (props: DropDownProps) => {
         item.name.toLocaleLowerCase().indexOf(filter.toLocaleLowerCase()) !== -1
     );
   }, [props.items, filter]);
+
+  useEffect(() => {
+    if (props.items.length)
+    {
+      setSelectedItem(props.items[0])
+    }
+  }, [props.items])
+  
 
   return (
     <div className="relative">

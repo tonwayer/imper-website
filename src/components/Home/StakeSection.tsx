@@ -10,7 +10,7 @@ const StakeSection = () => {
   const [isVisible, setVisible] = useState(false);
   const domRef = useRef<HTMLDivElement | null>(null);
   const { data, loaded } = useAxios('/projects/all', 'get');
-  const [live, setLive ] = useState(1)
+  const [live, setLive] = useState(1)
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -32,7 +32,7 @@ const StakeSection = () => {
   }
 
   return (
-    <section className="md:mt-[100vh]" id="stake-section">
+    <section className="md:mt-[140vh]" id="stake-section">
       <div className="md:block hidden">
         <div
           ref={domRef}
@@ -54,14 +54,12 @@ const StakeSection = () => {
       <div className="max-w-[587px] mx-auto md:mt-[155px] mt-[30px]">
         <CornerBorderDiv className="left-top-corner right-bottom-corner text-center">
           <div className="md:pl-lg md:pb-[42px] md:pr-xxx-big pt-2">
-            <FadeInSection>
-              <h4 className="font-bold text-md text-primary-500 font-inter mb-2">
-                Stake now
-              </h4>
-              <h3 className="font-bold md:text-[45px] md:leading-[64px] text-4xl mb-2 text-center md:text-left">
-                Our supported projects
-              </h3>
-            </FadeInSection>
+            <h4 className="font-bold text-md text-primary-500 font-inter mb-2">
+              Stake now
+            </h4>
+            <h3 className="font-bold md:text-[45px] md:leading-[64px] text-4xl mb-2 text-center md:text-left">
+              Our supported projects
+            </h3>
             <p className="font-inter mb-x-big text-sm">
               {data?.description ??
                 `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam

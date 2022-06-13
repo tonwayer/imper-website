@@ -68,9 +68,9 @@ const Lode = () => {
               <primitive
                 key={2}
                 object={scene3}
-                position={[460, 160, -20]}
-                scale={1200 + top * 240000}
-                rotation={[0, rotation, 0]}
+                position={[460, 200, -20]}
+                scale={0.06 + top * 30}
+                rotation={[0.08, rotation, 0]}
               />
             </Suspense>
           </Canvas>
@@ -91,8 +91,8 @@ const Lode = () => {
               <primitive
                 key={4}
                 object={scene3}
-                position={[0, 315, -20]}
-                scale={470 + top * 150000}
+                position={[0, 325, -20]}
+                scale={0.022 + top * 25}
                 rotation={[0, rotation, 0]}
               />
             </Suspense>

@@ -49,9 +49,7 @@ const CalculatorSection = () => {
   }
 
   const yearlyEarning = useMemo(() => {
-    console.log(selectedItem, asset)
     if (selectedItem) {
-      console.log(selectedItem?.project_apr * selectedItem?.token_price * asset)
       return selectedItem?.project_apr * selectedItem?.token_price * asset
     }
     else
@@ -86,7 +84,7 @@ const CalculatorSection = () => {
         </CornerBorderDiv>
       </div>
       <div className="md:w-3/5 md:mt-[85px]">
-        <Card className="calc-card  ml-auto">
+        <Card className="calc-card md:ml-auto mx-auto">
           <h4 className="hidden md:block font-spaceGrotesk text-2xl font-bold text-center mb-5">
             Simulate your earn
           </h4>

@@ -6,7 +6,7 @@ const InfraSection = () => {
     <section className="md:mt-[320px] mt-[70px]">
       <div className="md:grid md:grid-cols-2">
         <div className="md:mr-10">
-          <CornerBorderDiv className="left-top-corner right-bottom-corner md:p-8 max-w-[380px] ml-auto">
+          <CornerBorderDiv className="left-top-corner right-bottom-corner md:p-8 max-w-[380px] md:ml-auto">
             <div>
               <FadeInSection>
                 <h4 className="font-bold text-md text-primary-500 font-inter mb-2 text-left">
