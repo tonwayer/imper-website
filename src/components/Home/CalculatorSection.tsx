@@ -52,6 +52,12 @@ const CalculatorSection = () => {
     } else return 0;
   }, [selectedItem, asset]);
 
+  const yearlyAsset = useMemo(() => {
+    if (selectedItem) {
+      return selectedItem?.project_apr * asset;
+    } else return 0;
+  }, [selectedItem, asset]);
+
   return (
     <section className="md:mt-[330px] md:px-[10px]">
       <div className="md:flex">
@@ -117,36 +123,33 @@ const CalculatorSection = () => {
                     Daily earnings
                   </td>
                   <td className="text-[#E5E7EB] font-bold pb-2 pt-6">
-                    8.01 ASSETS
+                    {`${nFormatter(yearlyAsset / 36, 2)} ASSETS`}
                   </td>
-                  <td className="text-imperGrey pb-2 pt-6 min-w-[60px]">{`$${nFormatter(
-                    yearlyEarning / 36,
-                    2
-                  )}`}</td>
+                  <td className="text-imperGrey pb-2 pt-6 min-w-[90px]">
+                    {`$${nFormatter(yearlyEarning / 36, 2)}`}
+                  </td>
                 </tr>
                 <tr className="border-b text-sm">
                   <td className="text-left text-imperGrey pb-2 pt-6">
                     Monthly earnings
                   </td>
                   <td className="text-[#E5E7EB] font-bold pb-2 pt-6">
-                    208.98 ASSETS
+                    {`${nFormatter(yearlyAsset / 12, 2)} ASSETS`}
                   </td>
-                  <td className="text-imperGrey pb-2 pt-6 min-w-[60px]">{`$${nFormatter(
-                    yearlyEarning / 12,
-                    2
-                  )}`}</td>
+                  <td className="text-imperGrey pb-2 pt-6 min-w-[90px]">
+                    {`$${nFormatter(yearlyEarning / 12, 2)}`}
+                  </td>
                 </tr>
                 <tr className="border-b text-sm">
                   <td className="text-left text-imperGrey pb-2 pt-6">
                     Yearly earnings
                   </td>
                   <td className="text-[#E5E7EB] font-bold pb-2 pt-6">
-                    2978.76 ASSETS
+                    {`${nFormatter(yearlyAsset, 2)} ASSETS`}
                   </td>
-                  <td className="text-imperGrey pb-2 pt-6 min-w-[60px]">{`$${nFormatter(
-                    yearlyEarning,
-                    2
-                  )}`}</td>
+                  <td className="text-imperGrey pb-2 pt-6 min-w-[90px]">
+                    {`$${nFormatter(yearlyEarning, 2)}`}
+                  </td>
                 </tr>
               </tbody>
             </table>
