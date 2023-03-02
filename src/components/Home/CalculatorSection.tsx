@@ -104,7 +104,7 @@ const CalculatorSection = () => {
               <span className="border-b-[1px] border-b-imperGrey w-1/2">
                 <NumberInput handleChange={handleChangeAsset} value={asset} />
               </span>
-              <span className="text-success">{`+${selectedItem?.project_apr}%`}</span>
+              <span className="text-success">{`+${selectedItem?.project_apr ?? 24}%`}</span>
             </div>
             <div className="relative my-4 block md:hidden ">
               <div className="bg-[#3f5d4a] rounded-full overflow-hidden">

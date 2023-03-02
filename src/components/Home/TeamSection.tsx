@@ -7,7 +7,24 @@ import FadeInSection from '../FadeInSection';
 import Hover3D from '../Hover3D';
 
 const TeamSection = () => {
-  const { data } = useAxios('/team', 'get');
+  // const { data } = useAxios('/team', 'get');
+  const data = [
+    {
+      profession: 'CEO',
+      photo: 'member3.jpg',
+      fullname: 'John Doe'
+    },
+    {
+      profession: 'CTO',
+      photo: 'member2.jpg',
+      fullname: 'John Doe'
+    },
+    {
+      profession: 'Staff Engineer',
+      photo: 'member1.jpg',
+      fullname: 'John Doe'
+    },
+  ]
 
   return (
     <section className="md:mt-[270px] mt-[80px]">
@@ -46,7 +63,7 @@ const TeamSection = () => {
           ))}
       </Carousel>
       <div className="hidden md:block">
-        <div className="flex justify-start flex-wrap">
+        <div className="flex justify-center flex-wrap">
           {data &&
             data.map((member: any, index: number) => (
               <div className="mr-10 mt-10" key={index}>

@@ -91,7 +91,7 @@ const HeroSection = () => {
               dolores et ea rebum
             </p>
             <Button
-              className="px-[60px] py-4 w-full"
+              className="px-[60px] py-4 w-1/2"
               handleClick={() => handleSeeProjects()}
             >
               <div className="flex items-center justify-center">
